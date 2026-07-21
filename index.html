@@ -16,6 +16,21 @@
       href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -48,7 +63,7 @@
           >
             <a href="">Bosh sahifa</a>
             <span
-              class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s]  w-0 group group-hover:w-full"
+              class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-full"
             ></span>
           </li>
           <li
@@ -105,124 +120,85 @@
       </div>
     </header>
     <main>
-      <section>
-        <div class="max-w-[1285px] mx-auto px-5">
+      <section id="hero">
+        <div class="w-full h-full bg-black/30 z-3"></div>
+        <div class="owl-carousel owl-carousel1 owl-theme">
           <div
-            id="default-carousel"
-            class="relative w-full"
-            data-carousel="slide"
+            class="item bg-[url(/images/hero1.jpg)] bg-no-repeat bg-center bg-cover pt-[210px] pb-[283px]"
           >
-            <!-- Carousel wrapper -->
-            <div class="relative h-56 overflow-hidden rounded-base md:h-96">
-              <!-- Item 1 -->
-              <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img
-                  src="./images/hero1.jpg"
-                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                  alt="..."
-                />
-              </div>
-              <!-- Item 2 -->
-              <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img
-                  src="./images/hero2.png"
-                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                  alt="..."
-                />
-              </div>
-              <!-- Item 3 -->
-              <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img
-                  src="./images/hero3.png"
-                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                  alt="..."
-                />
+            <div class="max-w-[1285px] mx-auto px-5">
+              <h1
+                class="font-[800] text-[100px] text-[#fff] text-center max-[810px]:!"
+              >
+                BALAND QADAM TASHLA.
+              </h1>
+              <p class="text-[#CAF231] font-[400] text-[16px] text-center">
+                1 890 000 so'm
+              </p>
+              <div class="!flex !justify-center !items-center !mt-[24px]">
+                <button
+                  class="p-[16px_40px] bg-[#CAF231] rounded-[9999px] border-[#CAF231] border-[2px] hover:!text-white hover:bg-transparent hover:text-white duration-[0.5s]"
+                >
+                  <a
+                    class="font-[400] text-[18px] text-center !text-[#171E00]"
+                    href=""
+                    >HOZIR SOTIB OLISH</a
+                  >
+                </button>
               </div>
             </div>
-            <!-- Slider indicators -->
-            <div
-              class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
-            >
-              <button
-                type="button"
-                class="w-20 h-2 hover:!bg-[#CAF231] rounded-[20px]"
-                aria-current="true"
-                aria-label="Slide 1"
-                data-carousel-slide-to="0"
-              ></button>
-              <button
-                type="button"
-                class="w-20 h-2 hover:!bg-[#CAF231] rounded-[20px]"
-                aria-current="false"
-                aria-label="Slide 2"
-                data-carousel-slide-to="1"
-              ></button>
-              <button
-                type="button"
-                class="w-20 h-2 hover:!bg-[#CAF231] rounded-[20px]"
-                aria-current="false"
-                aria-label="Slide 3"
-                data-carousel-slide-to="2"
-              ></button>
-            </div>
-            <!-- Slider controls -->
-            <button
-              type="button"
-              class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-              data-carousel-prev
-            >
-              <span
-                class="inline-flex items-center justify-center w-10 h-10 rounded-base bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-              >
-                <svg
-                  class="w-5 h-5 text-white rtl:rotate-180"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="m15 19-7-7 7-7"
-                  />
-                </svg>
-                <span class="sr-only">Previous</span>
-              </span>
-            </button>
-            <button
-              type="button"
-              class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-              data-carousel-next
-            >
-              <span
-                class="inline-flex items-center justify-center w-10 h-10 rounded-base bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-              >
-                <svg
-                  class="w-5 h-5 text-white rtl:rotate-180"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="m9 5 7 7-7 7"
-                  />
-                </svg>
-                <span class="sr-only">Next</span>
-              </span>
-            </button>
           </div>
+          <div
+            class="item bg-[url(/images/hero2.png)] bg-no-repeat bg-center bg-cover pt-[210px] pb-[283px]"
+          >
+            <div class="max-w-[1285px] mx-auto px-5">
+              <h1
+                class="font-[800] text-[100px] text-[#fff] text-center max-[810px]:!"
+              >
+                BALAND QADAM TASHLA.
+              </h1>
+              <p class="text-[#CAF231] font-[400] text-[16px] text-center">
+                2 000 000 so'm
+              </p>
+              <div class="!flex !justify-center !items-center !mt-[24px]">
+                <button
+                  class="p-[16px_40px] bg-[#CAF231] rounded-[9999px] border-[#CAF231] border-[2px] hover:!text-white hover:bg-transparent hover:text-white duration-[0.5s]"
+                >
+                  <a
+                    class="font-[400] text-[18px] text-center !text-[#171E00]"
+                    href=""
+                    >HOZIR SOTIB OLISH</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="item bg-[url(/images/hero3.png)] bg-no-repeat bg-center bg-cover pt-[210px] pb-[283px]"
+          >
+            <div class="max-w-[1285px] mx-auto px-5">
+              <h1
+                class="font-[800] text-[100px] text-[#fff] text-center max-[810px]:!"
+              >
+                BALAND QADAM TASHLA.
+              </h1>
+              <p class="text-[#CAF231] font-[400] text-[16px] text-center">
+                2 220 000 so'm
+              </p>
+              <div class="!flex !justify-center !items-center !mt-[24px]">
+                <button
+                  class="p-[16px_40px] bg-[#CAF231] rounded-[9999px] border-[#CAF231] border-[2px] hover:!text-white hover:bg-transparent hover:text-white duration-[0.5s]"
+                >
+                  <a
+                    class="font-[400] text-[18px] text-center !text-[#171E00]"
+                    href=""
+                    >HOZIR SOTIB OLISH</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </section>
     </main>
@@ -320,5 +296,36 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(".owl-carousel1").owlCarousel({
+        loop: true,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 1,
+          },
+          1000: {
+            items: 1,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
