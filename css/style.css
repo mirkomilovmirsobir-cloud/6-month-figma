@@ -1,3 +1,136 @@
-*{
-    font-family: Space Grotesk;
+* {
+  font-family: Space Grotesk;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(10, 10, 10, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.brands {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 40px 0;
+  overflow: hidden;
+  background: #131411;
+}
+.brands-track {
+  display: flex;
+  gap: 48px;
+  width: max-content;
+  animation: scroll 22s linear infinite;
+}
+.brands-track span {
+  font-size: 16px;
+  letter-spacing: 0.14em;
+  color: white;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  white-space: nowrap;
+}
+.brands-track span::after {
+  content: "★";
+  color: #caf231;
+  margin-left: 48px;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+#hero .owl-carousel1 {
+  position: relative;
+}
+
+#hero .owl-dots {
+  position: relative;
+  left: 0;
+  bottom: 30px;
+  max-width: 1285px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#hero .owl-dots .owl-dot:nth-child(1) {
+  position: absolute;
+  left: 0;
+}
+
+#hero .owl-dots .owl-dot:nth-child(2) {
+  position: absolute;
+  left: 90px;
+}
+
+#hero .owl-dots .owl-dot:nth-child(3) {
+  position: absolute;
+  left: 180px;
+}
+
+#hero .owl-dots .owl-dot span {
+  width: 70px !important;
+  height: 5px !important;
+}
+
+#hero .owl-dots .active span {
+  background-color: #caf231 !important;
+}
+
+@media (max-width: 450px) {
+  #hero .owl-dots .owl-dot span {
+    width: 50px !important;
+  }
+  #hero .owl-dots .owl-dot:nth-child(1) {
+    position: absolute;
+    left: 0;
+  }
+
+  #hero .owl-dots .owl-dot:nth-child(2) {
+    position: absolute;
+    left: 70px;
+  }
+
+  #hero .owl-dots .owl-dot:nth-child(3) {
+    position: absolute;
+    left: 140px;
+  }
+}
+
+#hero .owl-nav {
+    position: relative;
+    bottom: 60px;
+    max-width: 1285px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#hero .owl-nav button:nth-child(1) {
+    position: absolute;
+    right: 50px;
+}
+
+#hero .owl-nav button:nth-child(2) {
+    position: absolute;
+    right: 0;
+}
+
+#hero .owl-nav button span {
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 100%;
 }
