@@ -32,7 +32,6 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="" />
   </head>
   <body>
     <header class="bg-[#0C0C0E] py-[17px]">
@@ -113,7 +112,7 @@
           <li>
             <button
               class="open-btn text-[#171E00] text-[16px] font-normal bg-[#CAF231] rounded-[9999px] p-[8px_24px] border-[#CAF231] border-[2px] hover:bg-transparent hover:text-white duration-[0.5s] max-[1005px]:!hidden"
-              id="openModalBtn"
+              id="kdOpenModalBtn"
             >
               Kirish
             </button>
@@ -219,75 +218,79 @@
         </div>
       </section>
     </main>
-    <div class="backdrop" id="backdrop">
+
+    <!-- ====== KROSSDROP RO'YXATDAN O'TISH MODALI (bitta nusxa) ====== -->
+    <div class="kd-backdrop" id="kdBackdrop">
       <div
-        class="modal"
+        class="kd-modal"
         role="dialog"
         aria-modal="true"
-        aria-labelledby="modal-title"
+        aria-labelledby="kdModalTitle"
       >
-        <button class="close-btn" aria-label="Yopish" id="closeModalBtn">
+        <button class="kd-close-btn" aria-label="Yopish" id="kdCloseModalBtn">
           ✕
         </button>
 
-        <h1 id="modal-title">Krossdrop'ga<br />qo'shiling</h1>
-        <p class="subtitle">
+        <h1 id="kdModalTitle">Krossdrop'ga<br />qo'shiling</h1>
+        <p class="kd-subtitle">
           Eksklyuziv yangiliklar va drop'lardan xabardor bo'ling.
         </p>
 
-        <form id="signupForm" novalidate>
+        <form id="kdSignupForm" novalidate>
           <div>
-            <label for="fullname">To'liq ismingiz</label>
+            <label for="kdFullname">To'liq ismingiz</label>
             <input
               type="text"
-              id="fullname"
+              id="kdFullname"
               placeholder="Ism Familiya"
               autocomplete="name"
               required
             />
-            <div class="error-text" id="fullname-error">
+            <div class="kd-error-text" id="kdFullname-error">
               Ismingizni kiriting
             </div>
           </div>
 
           <div>
-            <label for="email">Email</label>
+            <label for="kdEmail">Email</label>
             <input
               type="email"
-              id="email"
+              id="kdEmail"
               placeholder="example@mail.com"
               autocomplete="email"
               required
             />
-            <div class="error-text" id="email-error">
+            <div class="kd-error-text" id="kdEmail-error">
               To'g'ri email kiriting
             </div>
           </div>
 
           <div>
-            <label for="password">Parol</label>
+            <label for="kdPassword">Parol</label>
             <input
               type="password"
-              id="password"
+              id="kdPassword"
               placeholder="••••••••"
               autocomplete="new-password"
               minlength="6"
               required
             />
-            <div class="error-text" id="password-error">
+            <div class="kd-error-text" id="kdPassword-error">
               Kamida 6 ta belgi kerak
             </div>
           </div>
 
-          <button type="submit" class="submit-btn" id="submitBtn">
+          <button type="submit" class="kd-submit-btn" id="kdSubmitBtn">
             Ro'yxatdan o'tish
           </button>
-          <div class="status" id="statusText"></div>
+          <div class="kd-status" id="kdStatusText"></div>
         </form>
 
-        <p class="footer-text">Profilingiz bormi? <a href="#">Kirish</a></p>
+        <p class="kd-footer-text">Profilingiz bormi? <a href="#">Kirish</a></p>
       </div>
     </div>
+    <!-- ====== / MODAL ====== -->
+
     <!-- drawer component -->
     <div
       id="drawer-left-example"
@@ -297,7 +300,7 @@
     >
       <div class="border-b border-default pb-4 mb-5 flex items-center menu">
         <h5
-          id="drawer-left-example"
+          id="drawer-left-label"
           class="inline-flex items-center text-lg font-medium text-body"
         >
           KROSSDROP.
@@ -372,13 +375,7 @@
       </ul>
       <br />
       <br />
-
-      <button
-        class="open-btn text-[#171E00] text-[16px] font-normal bg-[#CAF231] rounded-[9999px] p-[8px_24px] border-[#CAF231] border-[2px] hover:bg-transparent hover:text-white duration-[0.5s] max-[1005px]:!w-full"
-        id="openModalBtn"
-      >
-        Kirish
-      </button>
+      <button class="open-btn !w-full" id="kdOpenModalBtnMobile">Kirish</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
@@ -416,120 +413,132 @@
       });
     </script>
     <script src="https://cdn.jotfor.ms/agent/embedjs/019f8d4e5d5870008f8b85edb6d7fcc59a8a/embed.js"></script>
+
+    <!-- ====== KROSSDROP MODAL SCRIPT (bitta nusxa) ====== -->
     <script>
-      // ====== TELEGRAM SOZLAMALARI ======
-      // 1. @BotFather orqali olingan bot tokenni shu yerga qo'ying
-      const TELEGRAM_BOT_TOKEN =
-        "8218575818:AAE8jHMpWNnrb9LP8MVxeT66XN1EfZq1qgI";
-      // 2. Xabar boradigan admin/chat ID (masalan, @userinfobot orqali aniqlash mumkin)
-      const TELEGRAM_CHAT_ID = "5025195852";
-      // ===================================
+      (function () {
+        // ====== TELEGRAM SOZLAMALARI ======
+        const TELEGRAM_BOT_TOKEN =
+          "8218575818:AAE8jHMpWNnrb9LP8MVxeT66XN1EfZq1qgI";
+        const TELEGRAM_CHAT_ID = "5025195852";
+        // ===================================
 
-      const form = document.getElementById("signupForm");
-      const submitBtn = document.getElementById("submitBtn");
-      const statusText = document.getElementById("statusText");
-      const backdrop = document.getElementById("backdrop");
-      const openModalBtn = document.getElementById("openModalBtn");
-      const closeModalBtn = document.getElementById("closeModalBtn");
+        const form = document.getElementById("kdSignupForm");
+        const submitBtn = document.getElementById("kdSubmitBtn");
+        const statusText = document.getElementById("kdStatusText");
+        const backdrop = document.getElementById("kdBackdrop");
+        const closeModalBtn = document.getElementById("kdCloseModalBtn");
 
-      function openModal() {
-        backdrop.classList.add("open");
-      }
-      function closeModal() {
-        backdrop.classList.remove("open");
-      }
+        // Modalni ochadigan barcha tugmalar (desktop + mobil menyudagi)
+        const openModalBtns = [
+          document.getElementById("kdOpenModalBtn"),
+          document.getElementById("kdOpenModalBtnMobile"),
+        ].filter(Boolean);
 
-      openModalBtn.addEventListener("click", openModal);
-      closeModalBtn.addEventListener("click", closeModal);
-      backdrop.addEventListener("click", (e) => {
-        if (e.target === backdrop) closeModal();
-      });
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") closeModal();
-      });
+        function openModal() {
+          backdrop.classList.add("open");
+          const drawer = document.getElementById("drawer-left-example");
+          if (drawer) {
+            drawer.classList.add("-translate-x-full");
+            document.body.classList.remove("overflow-hidden");
+          }
+        }
+        function closeModal() {
+          backdrop.classList.remove("open");
+        }
 
-      function setError(id, show) {
-        document.getElementById(id).classList.toggle("invalid", show);
-        document.getElementById(id + "-error").classList.toggle("show", show);
-      }
-
-      function validate() {
-        let ok = true;
-        const fullname = document.getElementById("fullname").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value;
-
-        const nameValid = fullname.length > 1;
-        setError("fullname", !nameValid);
-        if (!nameValid) ok = false;
-
-        const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-        setError("email", !emailValid);
-        if (!emailValid) ok = false;
-
-        const passValid = password.length >= 6;
-        setError("password", !passValid);
-        if (!passValid) ok = false;
-
-        return ok;
-      }
-
-      async function sendTelegramNotification(fullname, email) {
-        const text =
-          `🆕 Yangi ro'yxatdan o'tish!\n\n` +
-          `👤 Ism: ${fullname}\n` +
-          `📧 Email: ${email}\n` +
-          `🕒 Vaqt: ${new Date().toLocaleString("uz-UZ")}`;
-
-        const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
-
-        const res = await fetch(url, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            chat_id: TELEGRAM_CHAT_ID,
-            text: text,
-          }),
+        openModalBtns.forEach((btn) =>
+          btn.addEventListener("click", openModal),
+        );
+        closeModalBtn.addEventListener("click", closeModal);
+        backdrop.addEventListener("click", (e) => {
+          if (e.target === backdrop) closeModal();
+        });
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") closeModal();
         });
 
-        if (!res.ok) {
-          const err = await res.json().catch(() => ({}));
-          throw new Error(
-            err.description || "Telegram xabarini yuborib bo'lmadi",
-          );
+        function setError(id, show) {
+          document.getElementById(id).classList.toggle("invalid", show);
+          document.getElementById(id + "-error").classList.toggle("show", show);
         }
-      }
 
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        statusText.textContent = "";
-        statusText.className = "status";
+        function validate() {
+          let ok = true;
+          const fullname = document.getElementById("kdFullname").value.trim();
+          const email = document.getElementById("kdEmail").value.trim();
+          const password = document.getElementById("kdPassword").value;
 
-        if (!validate()) return;
+          const nameValid = fullname.length > 1;
+          setError("kdFullname", !nameValid);
+          if (!nameValid) ok = false;
 
-        const fullname = document.getElementById("fullname").value.trim();
-        const email = document.getElementById("email").value.trim();
+          const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+          setError("kdEmail", !emailValid);
+          if (!emailValid) ok = false;
 
-        submitBtn.disabled = true;
-        submitBtn.textContent = "Yuborilmoqda...";
+          const passValid = password.length >= 6;
+          setError("kdPassword", !passValid);
+          if (!passValid) ok = false;
 
-        try {
-          if (TELEGRAM_BOT_TOKEN === "YOUR_BOT_TOKEN_HERE") {
-            throw new Error("Demo rejimi: Telegram bot tokeni sozlanmagan");
+          return ok;
+        }
+
+        async function sendTelegramNotification(fullname, email) {
+          const text =
+            `🆕 Yangi ro'yxatdan o'tish!\n\n` +
+            `👤 Ism: ${fullname}\n` +
+            `📧 Email: ${email}\n` +
+            `🕒 Vaqt: ${new Date().toLocaleString("uz-UZ")}`;
+
+          const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
+          const res = await fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              chat_id: TELEGRAM_CHAT_ID,
+              text: text,
+            }),
+          });
+
+          if (!res.ok) {
+            const err = await res.json().catch(() => ({}));
+            throw new Error(
+              err.description || "Telegram xabarini yuborib bo'lmadi",
+            );
           }
-          await sendTelegramNotification(fullname, email);
-          statusText.textContent = "Muvaffaqiyatli ro'yxatdan o'tdingiz!";
-          statusText.classList.add("success");
-          form.reset();
-          setTimeout(closeModal, 1500);
-        } catch (err) {
-          statusText.textContent = err.message;
-          statusText.classList.add("error");
-        } finally {
-          submitBtn.disabled = false;
-          submitBtn.textContent = "Ro'yxatdan o'tish";
         }
-      });
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          statusText.textContent = "";
+          statusText.className = "kd-status";
+
+          if (!validate()) return;
+
+          const fullname = document.getElementById("kdFullname").value.trim();
+          const email = document.getElementById("kdEmail").value.trim();
+
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Yuborilmoqda...";
+
+          try {
+            await sendTelegramNotification(fullname, email);
+            statusText.textContent = "Muvaffaqiyatli ro'yxatdan o'tdingiz!";
+            statusText.classList.add("kd-status--success");
+            form.reset();
+            setTimeout(closeModal, 1500);
+          } catch (err) {
+            statusText.textContent = err.message;
+            statusText.classList.add("kd-status--error");
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Ro'yxatdan o'tish";
+          }
+        });
+      })();
     </script>
+    <!-- ====== / MODAL SCRIPT ====== -->
   </body>
 </html>
