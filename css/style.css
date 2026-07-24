@@ -4,7 +4,7 @@
 header {
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 5;
   background: rgba(10, 10, 10, 0.88);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
@@ -133,4 +133,13 @@ header {
     cursor: pointer;
     border: 1px solid black;
     border-radius: 100%;
+}
+
+.menu {
+    z-index: 49;
+}
+
+.modal {
+    box-shadow: 0px 25px 50px -12px #00000040 !important;
+
 }
