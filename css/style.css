@@ -115,23 +115,27 @@ header {
 #hero .owl-nav button:nth-child(1) {
   position: absolute;
   right: 50px;
+  border: 1px solid #caf231 !important;
+  border-radius: 100%;
 }
 
 #hero .owl-nav button:nth-child(2) {
   position: absolute;
   right: 0;
+  border: 1px solid #caf231 !important;
+  border-radius: 100%;
 }
 
 #hero .owl-nav button span {
   background-color: transparent;
   width: 40px;
   height: 40px;
-  color: black;
+  color: #caf231;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border: 1px solid black;
+  border: 1px solid #caf231 !important;
   border-radius: 100%;
 }
 
@@ -157,8 +161,7 @@ header {
   background: var(--accent);
   color: var(--accent-text);
   border: none;
-  border-radius: 999px;
-  padding: 16px 32px;
+  border-radius: 9999px;
   font-size: 14px;
   font-weight: 800;
   letter-spacing: 0.04em;
