@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sneakers</title>
+    <link rel="icon" type="image/png" href="../images/nikeicon.png" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="bg-[#0C0C0E] py-[17px]">
+      <div
+        class="max-w-[1285px] mx-auto px-5 flex justify-between items-center"
+      >
+        <div class="text-center !hidden max-[1005px]:!block">
+          <button
+            class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
+            type="button"
+            data-drawer-target="drawer-left-example"
+            data-drawer-show="drawer-left-example"
+            data-drawer-placement="left"
+            aria-controls="drawer-left-example"
+          >
+            <img src="../images/menu.svg" alt="" />
+          </button>
+        </div>
+        <a href="../index.html"
+          ><h1
+            class="text-[32px] font-[700] text-[#E4E2DD] max-[450px]:!text-[24px]"
+          >
+            KROSSDROP.
+          </h1></a
+        >
+        <ul class="flex gap-[32px] text-[#E4E2DD] max-[1005px]:!hidden">
+          <li
+            class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
+          >
+            <a href="../index.html">Bosh sahifa</a>
+            <span
+              class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-full"
+            ></span>
+          </li>
+          <li
+            class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
+          >
+            <a href="">Do'kon</a>
+            <span
+              class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-full"
+            ></span>
+          </li>
+          <li
+            class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
+          >
+            <a href="">Yangi kelganlar</a>
+            <span
+              class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-full"
+            ></span>
+          </li>
+          <li
+            class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
+          >
+            <a href="./bizhaqimizda.html">Biz haqimizda</a>
+            <span
+              class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-full"
+            ></span>
+          </li>
+          <li
+            class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
+          >
+            <a href="">Aloqa</a>
+            <span
+              class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-full"
+            ></span>
+          </li>
+        </ul>
+        <ul class="flex items-center gap-[24px]">
+          <li>
+            <button><img src="../images/search.svg" alt="" /></button>
+          </li>
+          <li>
+            <button><img src="../images/like.svg" alt="" /></button>
+          </li>
+          <li>
+            <button><img src="../images/cart.svg" alt="" /></button>
+          </li>
+          <li>
+            <button
+              class="open-btn text-[#171E00] text-[16px] font-normal bg-[#CAF231] rounded-[9999px] p-[8px_24px] border-[#CAF231] border-[2px] hover:bg-transparent hover:text-white duration-[0.5s] max-[1005px]:!hidden"
+              id="kdOpenModalBtn"
+            >
+              Kirish
+            </button>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section
+        class="bg-[url(../images/bizhero.png)] bg-no-repeat bg-cover bg-center object-cover"
+      >
+        <div class="max-w-[1285px] w-full mx-auto px-5 pt-[100px]">
+          <h2
+            class="text-white text-[120px] font-bold max-[865px]:!text-[70px] max-[515px]:!text-[50px]"
+          >
+            TUG'ILGANMIZ.
+          </h2>
+          <p class="font-notmal text-[20px] text-[#C5C9AE] mt-[32px]">
+            2019-yildan beri O'zbekistonga dunyoning eng zo'r krossovkalarini
+            <br />olib kelamiz. Har bir juftlik — bizning madaniyatimiz va
+            ehtirosimizning <br />bir qismi.
+          </p>
+          <p class="font-normal text-[14px] text-white mt-[176px]">
+            PASTGA SURING
+          </p>
+        </div>
+      </section>
+      <section class="py-[48px] bg-[#caf231]">
+        <div class="max-w-[1285px] w-full mx-auto px-5 flex justify-between items-center max-[755px]:!flex-col">
+          <div>
+            <h3 class="font-bold text-[#1B1B1F] text-[56px]">8+</h3>
+            <p class="font-semibold text-[#1B1B1F] text-[14px]">Jahon brendlari</p>
+          </div>
+          <div>
+            <hr class="w-full">
+            <h3 class="font-bold text-[#1B1B1F] text-[56px]">50K+</h3>
+            <p class="font-semibold text-[#1B1B1F] text-[14px]"></p>Baxtli mijozlar
+          </div>
+          <div>
+            <hr class="w-full">
+            <h3 class="font-bold text-[#1B1B1F] text-[56px]">1000+</h3>
+            <p class="font-semibold text-[#1B1B1F] text-[14px]">Model assortimentda</p>
+          </div>
+          <div>
+            <hr class="w-full">
+            <h3 class="font-bold text-[#1B1B1F] text-[56px]">3</h3>
+            <p class="font-semibold text-[#1B1B1F] text-[14px]">Do'kon Toshkentda</p>
+          </div>
+        </div>
+      </section>
+      <section class="py-[140px] bg-[#0C0C0E]"></section>
+    </main>
+
+    <!-- ====== KROSSDROP RO'YXATDAN O'TISH MODALI (bitta nusxa) ====== -->
+    <div class="kd-backdrop" id="kdBackdrop">
+      <div
+        class="kd-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="kdModalTitle"
+      >
+        <button class="kd-close-btn" aria-label="Yopish" id="kdCloseModalBtn">
+          ✕
+        </button>
+
+        <h1 id="kdModalTitle">Krossdrop'ga<br />qo'shiling</h1>
+        <p class="kd-subtitle">
+          Eksklyuziv yangiliklar va drop'lardan xabardor bo'ling.
+        </p>
+
+        <form id="kdSignupForm" novalidate>
+          <div>
+            <label for="kdFullname">To'liq ismingiz</label>
+            <input
+              type="text"
+              id="kdFullname"
+              placeholder="Ism Familiya"
+              autocomplete="name"
+              required
+            />
+            <div class="kd-error-text" id="kdFullname-error">
+              Ismingizni kiriting
+            </div>
+          </div>
+
+          <div>
+            <label for="kdEmail">Email</label>
+            <input
+              type="email"
+              id="kdEmail"
+              placeholder="example@mail.com"
+              autocomplete="email"
+              required
+            />
+            <div class="kd-error-text" id="kdEmail-error">
+              To'g'ri email kiriting
+            </div>
+          </div>
+
+          <div>
+            <label for="kdPassword">Parol</label>
+            <input
+              type="password"
+              id="kdPassword"
+              placeholder="••••••••"
+              autocomplete="new-password"
+              minlength="6"
+              required
+            />
+            <div class="kd-error-text" id="kdPassword-error">
+              Kamida 6 ta belgi kerak
+            </div>
+          </div>
+
+          <button type="submit" class="kd-submit-btn" id="kdSubmitBtn">
+            Ro'yxatdan o'tish
+          </button>
+          <div class="kd-status" id="kdStatusText"></div>
+        </form>
+
+        <p class="kd-footer-text">Profilingiz bormi? <a href="#">Kirish</a></p>
+      </div>
+    </div>
+    <!-- ====== / MODAL ====== -->
+
+    <!-- drawer component -->
+    <div
+      id="drawer-left-example"
+      class="fixed top-0 left-0 z-40 h-screen bg-[#131411] text-[#CAF231] p-4 overflow-y-auto transition-transform -translate-x-full w-96"
+      tabindex="-1"
+      aria-labelledby="drawer-left-label"
+    >
+      <div class="border-b border-default pb-4 mb-5 flex items-center menu">
+        <h5
+          id="drawer-left-label"
+          class="inline-flex items-center text-lg font-medium text-body"
+        >
+          KROSSDROP.
+        </h5>
+        <button
+          type="button"
+          data-drawer-hide="drawer-left-example"
+          aria-controls="drawer-left-example"
+          class="text-body bg-transparent hover:text-heading hover:bg-neutral-tertiary rounded-base w-9 h-9 absolute top-2.5 end-2.5 flex items-center justify-center"
+        >
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18 17.94 6M18 18 6.06 6"
+            />
+          </svg>
+          <span class="sr-only">Close menu</span>
+        </button>
+      </div>
+      <ul class="flex gap-[32px] text-[#E4E2DD] flex-col">
+        <li
+          class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
+        >
+          <a href="../index.html">Bosh sahifa</a>
+          <span
+            class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-22"
+          ></span>
+        </li>
+        <li
+          class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
+        >
+          <a href="">Do'kon</a>
+          <span
+            class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-13"
+          ></span>
+        </li>
+        <li
+          class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
+        >
+          <a href="">Yangi kelganlar</a>
+          <span
+            class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-28"
+          ></span>
+        </li>
+        <li
+          class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
+        >
+          <a href="./bizhaqimizda.html">Biz haqimizda</a>
+          <span
+            class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-25"
+          ></span>
+        </li>
+        <li
+          class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
+        >
+          <a href="">Aloqa</a>
+          <span
+            class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-12"
+          ></span>
+        </li>
+      </ul>
+      <br />
+      <br />
+      <button class="open-btn !w-full" id="kdOpenModalBtnMobile">Kirish</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(".owl-carousel1").owlCarousel({
+        loop: true,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 1,
+          },
+          1000: {
+            items: 1,
+          },
+        },
+      });
+    </script>
+    <script>
+      $(".owl-carousel2").owlCarousel({
+        loop: true,
+        dots: false,
+        nav: false,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 4,
+            nav: false,
+          },
+        },
+      });
+    </script>
+    <script src="https://cdn.jotfor.ms/agent/embedjs/019f8d4e5d5870008f8b85edb6d7fcc59a8a/embed.js"></script>
+
+    <!-- ====== KROSSDROP MODAL SCRIPT (bitta nusxa) ====== -->
+    <script>
+      (function () {
+        // ====== TELEGRAM SOZLAMALARI ======
+        const TELEGRAM_BOT_TOKEN =
+          "8218575818:AAE8jHMpWNnrb9LP8MVxeT66XN1EfZq1qgI";
+        const TELEGRAM_CHAT_ID = "5025195852";
+        // ===================================
+
+        const form = document.getElementById("kdSignupForm");
+        const submitBtn = document.getElementById("kdSubmitBtn");
+        const statusText = document.getElementById("kdStatusText");
+        const backdrop = document.getElementById("kdBackdrop");
+        const closeModalBtn = document.getElementById("kdCloseModalBtn");
+
+        // Modalni ochadigan barcha tugmalar (desktop + mobil menyudagi)
+        const openModalBtns = [
+          document.getElementById("kdOpenModalBtn"),
+          document.getElementById("kdOpenModalBtnMobile"),
+        ].filter(Boolean);
+
+        function openModal() {
+          backdrop.classList.add("open");
+          const drawer = document.getElementById("drawer-left-example");
+          if (drawer) {
+            drawer.classList.add("-translate-x-full");
+            document.body.classList.remove("overflow-hidden");
+          }
+        }
+        function closeModal() {
+          backdrop.classList.remove("open");
+        }
+
+        openModalBtns.forEach((btn) =>
+          btn.addEventListener("click", openModal),
+        );
+        closeModalBtn.addEventListener("click", closeModal);
+        backdrop.addEventListener("click", (e) => {
+          if (e.target === backdrop) closeModal();
+        });
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") closeModal();
+        });
+
+        function setError(id, show) {
+          document.getElementById(id).classList.toggle("invalid", show);
+          document.getElementById(id + "-error").classList.toggle("show", show);
+        }
+
+        function validate() {
+          let ok = true;
+          const fullname = document.getElementById("kdFullname").value.trim();
+          const email = document.getElementById("kdEmail").value.trim();
+          const password = document.getElementById("kdPassword").value;
+
+          const nameValid = fullname.length > 1;
+          setError("kdFullname", !nameValid);
+          if (!nameValid) ok = false;
+
+          const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+          setError("kdEmail", !emailValid);
+          if (!emailValid) ok = false;
+
+          const passValid = password.length >= 6;
+          setError("kdPassword", !passValid);
+          if (!passValid) ok = false;
+
+          return ok;
+        }
+
+        async function sendTelegramNotification(fullname, email) {
+          const text =
+            `🆕 Yangi ro'yxatdan o'tish!\n\n` +
+            `👤 Ism: ${fullname}\n` +
+            `📧 Email: ${email}\n` +
+            `🕒 Vaqt: ${new Date().toLocaleString("uz-UZ")}`;
+
+          const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
+          const res = await fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              chat_id: TELEGRAM_CHAT_ID,
+              text: text,
+            }),
+          });
+
+          if (!res.ok) {
+            const err = await res.json().catch(() => ({}));
+            throw new Error(
+              err.description || "Telegram xabarini yuborib bo'lmadi",
+            );
+          }
+        }
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          statusText.textContent = "";
+          statusText.className = "kd-status";
+
+          if (!validate()) return;
+
+          const fullname = document.getElementById("kdFullname").value.trim();
+          const email = document.getElementById("kdEmail").value.trim();
+
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Yuborilmoqda...";
+
+          try {
+            await sendTelegramNotification(fullname, email);
+            statusText.textContent = "Muvaffaqiyatli ro'yxatdan o'tdingiz!";
+            statusText.classList.add("kd-status--success");
+            form.reset();
+            setTimeout(closeModal, 1500);
+          } catch (err) {
+            statusText.textContent = err.message;
+            statusText.classList.add("kd-status--error");
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Ro'yxatdan o'tish";
+          }
+        });
+      })();
+    </script>
+    <!-- ====== / MODAL SCRIPT ====== -->
+  </body>
+</html>
