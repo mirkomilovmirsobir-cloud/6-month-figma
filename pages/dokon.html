@@ -1,0 +1,968 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sneakers</title>
+    <link rel="icon" type="image/png" href="../images/nikeicon.png" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="bg-[#0C0C0E] py-[17px]">
+      <div
+        class="max-w-[1285px] mx-auto px-5 flex justify-between items-center"
+      >
+        <div class="text-center !hidden max-[1005px]:!block">
+          <button
+            class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
+            type="button"
+            data-drawer-target="drawer-left-example"
+            data-drawer-show="drawer-left-example"
+            data-drawer-placement="left"
+            aria-controls="drawer-left-example"
+          >
+            <img src="../images/menu.svg" alt="" />
+          </button>
+        </div>
+        <a href="../index.html"
+          ><h1
+            class="text-[32px] font-[700] text-[#E4E2DD] max-[450px]:!text-[24px]"
+          >
+            KROSSDROP.
+          </h1></a
+        >
+        <ul class="flex gap-[32px] text-[#E4E2DD] max-[1005px]:!hidden">
+          <li
+            class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
+          >
+            <a href="../index.html">Bosh sahifa</a>
+            <span
+              class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-full"
+            ></span>
+          </li>
+          <li
+            class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
+          >
+            <a href="./dokon.html">Do'kon</a>
+            <span
+              class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-full"
+            ></span>
+          </li>
+          <li
+            class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
+          >
+            <a href="">Yangi kelganlar</a>
+            <span
+              class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-full"
+            ></span>
+          </li>
+          <li
+            class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
+          >
+            <a href="./bizhaqimizda.html">Biz haqimizda</a>
+            <span
+              class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-full"
+            ></span>
+          </li>
+          <li
+            class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
+          >
+            <a href="./aloqa.html">Aloqa</a>
+            <span
+              class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-full"
+            ></span>
+          </li>
+        </ul>
+        <ul class="flex items-center gap-[24px]">
+          <li>
+            <button class="max-[990px]:!hidden">
+              <img src="../images/search.svg" alt="" />
+            </button>
+          </li>
+          <li>
+            <button class="max-[990px]:!hidden">
+              <img src="../images/like.svg" alt="" />
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="../images/cart.svg" alt="" />
+            </button>
+          </li>
+          <li>
+            <button
+              class="open-btn text-[#171E00] text-[16px] font-normal bg-[#CAF231] rounded-[9999px] p-[8px_24px] border-[#CAF231] border-[2px] hover:bg-transparent hover:text-white duration-[0.5s] max-[1005px]:!hidden"
+              id="kdOpenModalBtn"
+            >
+              Kirish
+            </button>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <!-- ====== DO'KON / KATALOG SEKSIYASI ====== -->
+      <section class="bg-[#0C0C0E] pt-[48px] pb-[100px]">
+        <div class="max-w-[1285px] mx-auto px-5">
+          <!-- breadcrumb -->
+          <nav class="text-[14px] text-[#8A8A85] flex items-center gap-2">
+            <a href="../index.html" class="hover:text-[#CAF231] duration-300"
+              >Bosh sahifa</a
+            >
+            <span>/</span>
+            <span class="text-[#E4E2DD]">Do'kon</span>
+          </nav>
+
+          <!-- sarlavha -->
+          <div class="mt-[14px] flex items-end gap-4 flex-wrap">
+            <h2
+              class="text-[40px] leading-[1] font-bold text-[#E4E2DD] max-[600px]:!text-[28px]"
+            >
+              BARCHA KROSSOVKALAR
+            </h2>
+            <span class="text-[#CAF231] text-[15px] pb-[4px]"
+              >(48 ta mahsulot)</span
+            >
+          </div>
+
+          <!-- kategoriya piltalari -->
+          <div class="mt-[28px] flex gap-3 flex-wrap">
+            <button
+              class="bg-[#CAF231] text-[#171E00] text-[14px] font-medium rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#CAF231] duration-300"
+            >
+              Barcha
+            </button>
+            <button
+              class="text-[#E4E2DD] text-[14px] rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#26262A] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+            >
+              Yugurish
+            </button>
+            <button
+              class="text-[#E4E2DD] text-[14px] rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#26262A] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+            >
+              Lifestyle
+            </button>
+            <button
+              class="text-[#E4E2DD] text-[14px] rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#26262A] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+            >
+              Basketbol
+            </button>
+            <button
+              class="text-[#E4E2DD] text-[14px] rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#26262A] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+            >
+              Retro
+            </button>
+            <button
+              class="text-[#E4E2DD] text-[14px] rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#26262A] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+            >
+              Skeyt
+            </button>
+            <button
+              class="text-[#E4E2DD] text-[14px] rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#26262A] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+            >
+              Limited Edition
+            </button>
+          </div>
+
+          <!-- kontent: filtr + grid -->
+          <div class="mt-[40px] flex gap-[30px] items-start max-[900px]:!flex-col">
+            <!-- SIDEBAR -->
+            <aside class="w-[260px] shrink-0 max-[900px]:!w-full">
+              <!-- brend -->
+              <div class="border-b border-[#26262A] pb-[24px]">
+                <div class="flex items-center justify-between">
+                  <h3
+                    class="text-[#E4E2DD] text-[13px] tracking-[2px] uppercase font-semibold"
+                  >
+                    Brend
+                  </h3>
+                  <span class="text-[#8A8A85] text-[12px]">▾</span>
+                </div>
+                <ul class="mt-[16px] flex flex-col gap-[12px]">
+                  <li>
+                    <label
+                      class="flex items-center gap-[10px] text-[#B7B7B2] text-[14px] cursor-pointer hover:text-[#CAF231] duration-300"
+                    >
+                      <input
+                        type="checkbox"
+                        class="w-[16px] h-[16px] accent-[#CAF231] bg-transparent"
+                      />
+                      Nike
+                    </label>
+                  </li>
+                  <li>
+                    <label
+                      class="flex items-center gap-[10px] text-[#B7B7B2] text-[14px] cursor-pointer hover:text-[#CAF231] duration-300"
+                    >
+                      <input
+                        type="checkbox"
+                        class="w-[16px] h-[16px] accent-[#CAF231] bg-transparent"
+                      />
+                      Adidas
+                    </label>
+                  </li>
+                  <li>
+                    <label
+                      class="flex items-center gap-[10px] text-[#B7B7B2] text-[14px] cursor-pointer hover:text-[#CAF231] duration-300"
+                    >
+                      <input
+                        type="checkbox"
+                        class="w-[16px] h-[16px] accent-[#CAF231] bg-transparent"
+                      />
+                      Puma
+                    </label>
+                  </li>
+                  <li>
+                    <label
+                      class="flex items-center gap-[10px] text-[#B7B7B2] text-[14px] cursor-pointer hover:text-[#CAF231] duration-300"
+                    >
+                      <input
+                        type="checkbox"
+                        class="w-[16px] h-[16px] accent-[#CAF231] bg-transparent"
+                      />
+                      New Balance
+                    </label>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- o'lcham -->
+              <div class="border-b border-[#26262A] py-[24px]">
+                <div class="flex items-center justify-between">
+                  <h3
+                    class="text-[#E4E2DD] text-[13px] tracking-[2px] uppercase font-semibold"
+                  >
+                    O'lcham
+                  </h3>
+                  <span class="text-[#8A8A85] text-[12px]">▾</span>
+                </div>
+                <div class="mt-[16px] grid grid-cols-4 gap-[8px]">
+                  <button
+                    class="h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                  >
+                    39
+                  </button>
+                  <button
+                    class="h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                  >
+                    40
+                  </button>
+                  <button
+                    class="h-[40px] rounded-[8px] border border-[#CAF231] text-[#CAF231] text-[14px] bg-[#CAF231]/10 duration-300"
+                  >
+                    41
+                  </button>
+                  <button
+                    class="h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                  >
+                    42
+                  </button>
+                  <button
+                    class="h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                  >
+                    43
+                  </button>
+                  <button
+                    class="h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                  >
+                    44
+                  </button>
+                  <button
+                    class="h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                  >
+                    45
+                  </button>
+                  <button
+                    class="h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                  >
+                    46
+                  </button>
+                </div>
+              </div>
+
+              <!-- narx -->
+              <div class="py-[24px]">
+                <div class="flex items-center justify-between">
+                  <h3
+                    class="text-[#E4E2DD] text-[13px] tracking-[2px] uppercase font-semibold"
+                  >
+                    Narx
+                  </h3>
+                  <span class="text-[#8A8A85] text-[12px]">▾</span>
+                </div>
+                <input
+                  type="range"
+                  min="500000"
+                  max="5000000"
+                  value="3000000"
+                  class="w-full mt-[18px] accent-[#CAF231]"
+                />
+                <div
+                  class="mt-[10px] flex justify-between text-[13px] text-[#8A8A85]"
+                >
+                  <span>500 000 so'm</span>
+                  <span>5 000 000 so'm</span>
+                </div>
+                <button
+                  class="mt-[24px] w-full bg-[#CAF231] text-[#171E00] text-[14px] font-semibold tracking-[1px] uppercase rounded-[9999px] py-[14px] border-[2px] border-[#CAF231] hover:bg-transparent hover:text-[#CAF231] duration-[0.5s]"
+                >
+                  Filtrni qo'llash
+                </button>
+                <button
+                  class="mt-[14px] w-full text-[#8A8A85] text-[13px] underline hover:text-[#CAF231] duration-300"
+                >
+                  Tozalash
+                </button>
+              </div>
+            </aside>
+
+            <!-- GRID -->
+            <div class="flex-1 w-full">
+              <!-- toolbar -->
+              <div
+                class="flex items-center justify-between gap-4 flex-wrap pb-[20px]"
+              >
+                <div class="flex gap-[10px] flex-wrap">
+                  <span
+                    class="flex items-center gap-[8px] text-[#B7B7B2] text-[13px] rounded-[9999px] px-[16px] py-[7px] border border-[#26262A]"
+                  >
+                    Nike <span class="text-[#CAF231]">✕</span>
+                  </span>
+                  <span
+                    class="flex items-center gap-[8px] text-[#B7B7B2] text-[13px] rounded-[9999px] px-[16px] py-[7px] border border-[#26262A]"
+                  >
+                    41-o'lcham <span class="text-[#CAF231]">✕</span>
+                  </span>
+                </div>
+                <div class="flex items-center gap-[14px]">
+                  <span class="text-[#8A8A85] text-[13px]">Saralash:</span>
+                  <select
+                    class="bg-transparent text-[#E4E2DD] text-[14px] border border-[#26262A] rounded-[9999px] px-[16px] py-[8px] outline-none"
+                  >
+                    <option class="bg-[#0C0C0E]">Eng yangilari</option>
+                    <option class="bg-[#0C0C0E]">Arzondan qimmatga</option>
+                    <option class="bg-[#0C0C0E]">Qimmatdan arzonga</option>
+                    <option class="bg-[#0C0C0E]">Ommabop</option>
+                  </select>
+                  <div class="flex items-center gap-[8px] text-[#CAF231]">
+                    <button class="text-[18px]">▦</button>
+                    <button class="text-[18px] text-[#4A4A4E]">▤</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- mahsulotlar -->
+              <div
+                class="grid grid-cols-3 gap-[24px] max-[1100px]:!grid-cols-2 max-[560px]:!grid-cols-1"
+              >
+                <!-- card 1 -->
+                <article
+                  class="bg-[#141416] rounded-[16px] p-[16px] group hover:-translate-y-[6px] duration-[0.4s]"
+                >
+                  <div class="flex items-start justify-between">
+                    <span
+                      class="bg-[#CAF231] text-[#171E00] text-[11px] font-semibold rounded-[9999px] px-[12px] py-[4px]"
+                      >YANGI</span
+                    >
+                    <button class="text-[#8A8A85] hover:text-[#CAF231] duration-300">
+                      ♡
+                    </button>
+                  </div>
+                  <div
+                    class="mt-[10px] h-[190px] rounded-[12px] bg-[#1C1C1F] flex items-center justify-center overflow-hidden"
+                  >
+                    <img
+                      src="../images/product-1.png"
+                      alt="Nike Air Max Pulse"
+                      class="max-h-[160px] object-contain group-hover:scale-[1.07] duration-[0.5s]"
+                    />
+                  </div>
+                  <p class="mt-[16px] text-[#8A8A85] text-[12px] tracking-[1px]">
+                    NIKE SPORTSWEAR
+                  </p>
+                  <h3 class="mt-[4px] text-[#E4E2DD] text-[16px] font-semibold">
+                    Nike Air Max Pulse
+                  </h3>
+                  <p class="mt-[10px] text-[#CAF231] text-[17px] font-bold">
+                    1 650 000 so'm
+                  </p>
+                  <p class="text-[#5F5F63] text-[13px] line-through">
+                    1 890 000 so'm
+                  </p>
+                </article>
+
+                <!-- card 2 -->
+                <article
+                  class="bg-[#141416] rounded-[16px] p-[16px] group hover:-translate-y-[6px] duration-[0.4s]"
+                >
+                  <div class="flex items-start justify-between">
+                    <span
+                      class="bg-[#FF6B6B] text-white text-[11px] font-semibold rounded-[9999px] px-[12px] py-[4px]"
+                      >-20%</span
+                    >
+                    <button class="text-[#8A8A85] hover:text-[#CAF231] duration-300">
+                      ♡
+                    </button>
+                  </div>
+                  <div
+                    class="mt-[10px] h-[190px] rounded-[12px] bg-[#1C1C1F] flex items-center justify-center overflow-hidden"
+                  >
+                    <img
+                      src="../images/product-2.png"
+                      alt="Adidas Forum Low"
+                      class="max-h-[160px] object-contain group-hover:scale-[1.07] duration-[0.5s]"
+                    />
+                  </div>
+                  <p class="mt-[16px] text-[#8A8A85] text-[12px] tracking-[1px]">
+                    ADIDAS ORIGINALS
+                  </p>
+                  <h3 class="mt-[4px] text-[#E4E2DD] text-[16px] font-semibold">
+                    Adidas Forum Low
+                  </h3>
+                  <p class="mt-[10px] text-[#CAF231] text-[17px] font-bold">
+                    980 000 so'm
+                  </p>
+                  <p class="text-[#5F5F63] text-[13px] line-through">
+                    1 220 000 so'm
+                  </p>
+                </article>
+
+                <!-- card 3 -->
+                <article
+                  class="bg-[#141416] rounded-[16px] p-[16px] group hover:-translate-y-[6px] duration-[0.4s]"
+                >
+                  <div class="flex items-start justify-between">
+                    <span
+                      class="bg-white text-[#171E00] text-[11px] font-semibold rounded-[9999px] px-[12px] py-[4px]"
+                      >LIMITED</span
+                    >
+                    <button class="text-[#8A8A85] hover:text-[#CAF231] duration-300">
+                      ♡
+                    </button>
+                  </div>
+                  <div
+                    class="mt-[10px] h-[190px] rounded-[12px] bg-[#1C1C1F] flex items-center justify-center overflow-hidden"
+                  >
+                    <img
+                      src="../images/product-3.png"
+                      alt="NB 2002R Protection Pack"
+                      class="max-h-[160px] object-contain group-hover:scale-[1.07] duration-[0.5s]"
+                    />
+                  </div>
+                  <p class="mt-[16px] text-[#8A8A85] text-[12px] tracking-[1px]">
+                    NEW BALANCE
+                  </p>
+                  <h3 class="mt-[4px] text-[#E4E2DD] text-[16px] font-semibold">
+                    NB 2002R Protection Pack
+                  </h3>
+                  <p class="mt-[10px] text-[#CAF231] text-[17px] font-bold">
+                    2 150 000 so'm
+                  </p>
+                </article>
+
+                <!-- card 4 -->
+                <article
+                  class="bg-[#141416] rounded-[16px] p-[16px] group hover:-translate-y-[6px] duration-[0.4s]"
+                >
+                  <div class="flex items-start justify-between">
+                    <span
+                      class="bg-[#CAF231] text-[#171E00] text-[11px] font-semibold rounded-[9999px] px-[12px] py-[4px]"
+                      >HIT</span
+                    >
+                    <button class="text-[#8A8A85] hover:text-[#CAF231] duration-300">
+                      ♡
+                    </button>
+                  </div>
+                  <div
+                    class="mt-[10px] h-[190px] rounded-[12px] bg-[#1C1C1F] flex items-center justify-center overflow-hidden"
+                  >
+                    <img
+                      src="../images/product-4.png"
+                      alt="Air Jordan 1 High OG"
+                      class="max-h-[160px] object-contain group-hover:scale-[1.07] duration-[0.5s]"
+                    />
+                  </div>
+                  <p class="mt-[16px] text-[#8A8A85] text-[12px] tracking-[1px]">
+                    JORDAN
+                  </p>
+                  <h3 class="mt-[4px] text-[#E4E2DD] text-[16px] font-semibold">
+                    Air Jordan 1 High OG
+                  </h3>
+                  <p class="mt-[10px] text-[#CAF231] text-[17px] font-bold">
+                    2 500 000 so'm
+                  </p>
+                </article>
+
+                <!-- card 5 -->
+                <article
+                  class="bg-[#141416] rounded-[16px] p-[16px] group hover:-translate-y-[6px] duration-[0.4s]"
+                >
+                  <div class="flex items-start justify-between">
+                    <span
+                      class="bg-white text-[#171E00] text-[11px] font-semibold rounded-[9999px] px-[12px] py-[4px]"
+                      >LIMITED</span
+                    >
+                    <button class="text-[#8A8A85] hover:text-[#CAF231] duration-300">
+                      ♡
+                    </button>
+                  </div>
+                  <div
+                    class="mt-[10px] h-[190px] rounded-[12px] bg-[#1C1C1F] flex items-center justify-center overflow-hidden"
+                  >
+                    <img
+                      src="../images/product-5.png"
+                      alt="Yeezy Boost 350 V2"
+                      class="max-h-[160px] object-contain group-hover:scale-[1.07] duration-[0.5s]"
+                    />
+                  </div>
+                  <p class="mt-[16px] text-[#8A8A85] text-[12px] tracking-[1px]">
+                    ADIDAS
+                  </p>
+                  <h3 class="mt-[4px] text-[#E4E2DD] text-[16px] font-semibold">
+                    Yeezy Boost 350 V2
+                  </h3>
+                  <p class="mt-[10px] text-[#CAF231] text-[17px] font-bold">
+                    3 100 000 so'm
+                  </p>
+                </article>
+
+                <!-- card 6 -->
+                <article
+                  class="bg-[#141416] rounded-[16px] p-[16px] group hover:-translate-y-[6px] duration-[0.4s]"
+                >
+                  <div class="flex items-start justify-between">
+                    <span
+                      class="bg-[#CAF231] text-[#171E00] text-[11px] font-semibold rounded-[9999px] px-[12px] py-[4px]"
+                      >YANGI</span
+                    >
+                    <button class="text-[#8A8A85] hover:text-[#CAF231] duration-300">
+                      ♡
+                    </button>
+                  </div>
+                  <div
+                    class="mt-[10px] h-[190px] rounded-[12px] bg-[#1C1C1F] flex items-center justify-center overflow-hidden"
+                  >
+                    <img
+                      src="../images/product-6.png"
+                      alt="ASICS Gel-Kayano 14"
+                      class="max-h-[160px] object-contain group-hover:scale-[1.07] duration-[0.5s]"
+                    />
+                  </div>
+                  <p class="mt-[16px] text-[#8A8A85] text-[12px] tracking-[1px]">
+                    ASICS
+                  </p>
+                  <h3 class="mt-[4px] text-[#E4E2DD] text-[16px] font-semibold">
+                    ASICS Gel-Kayano 14
+                  </h3>
+                  <p class="mt-[10px] text-[#CAF231] text-[17px] font-bold">
+                    1 790 000 so'm
+                  </p>
+                </article>
+              </div>
+
+              <!-- yuklash -->
+              <div class="mt-[60px] flex flex-col items-center gap-[18px]">
+                <div class="w-[220px] h-[3px] bg-[#26262A] rounded-[9999px]">
+                  <span
+                    class="block h-full w-[35%] bg-[#CAF231] rounded-[9999px]"
+                  ></span>
+                </div>
+                <p class="text-[#8A8A85] text-[13px]">
+                  48 tadan 6 tasi ko'rsatildi
+                </p>
+                <button
+                  class="flex items-center gap-[10px] text-[#CAF231] text-[13px] font-semibold tracking-[1px] uppercase rounded-[9999px] px-[36px] py-[14px] border border-[#CAF231] hover:bg-[#CAF231] hover:text-[#171E00] duration-[0.5s]"
+                >
+                  Yana 12 tasini yuklash ↻
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- pastki info karta -->
+          <div
+            class="mt-[90px] bg-[#141416] rounded-[24px] p-[46px] flex gap-[40px] items-center max-[900px]:!flex-col max-[900px]:!p-[28px]"
+          >
+            <div class="flex-1">
+              <h3
+                class="text-[#E4E2DD] text-[13px] tracking-[2px] uppercase font-semibold"
+              >
+                Faqat original krossovkalar
+              </h3>
+              <p class="mt-[16px] text-[#8A8A85] text-[15px] leading-[1.7]">
+                KROSSDROP — bu barcha mahsulotlari rasmiy distribyutorlardan
+                keladigan do'kon. Har bir juft yetkazib berishdan oldin
+                mutaxassislarimiz tomonidan tekshiriladi va original
+                sertifikati bilan birga jo'natiladi.
+              </p>
+              <a
+                href="./bizhaqimizda.html"
+                class="mt-[20px] inline-block text-[#CAF231] text-[14px] underline"
+                >Batafsil bilish →</a
+              >
+            </div>
+            <div class="grid grid-cols-2 gap-[34px] shrink-0">
+              <div>
+                <p class="text-[#CAF231] text-[38px] font-bold leading-[1]">
+                  100%
+                </p>
+                <p class="mt-[6px] text-[#8A8A85] text-[13px]">Original</p>
+              </div>
+              <div>
+                <p class="text-[#E4E2DD] text-[38px] font-bold leading-[1]">
+                  24H
+                </p>
+                <p class="mt-[6px] text-[#8A8A85] text-[13px]">
+                  Tez yetkazib berish
+                </p>
+              </div>
+              <div>
+                <p class="text-[#E4E2DD] text-[38px] font-bold leading-[1]">
+                  10K+
+                </p>
+                <p class="mt-[6px] text-[#8A8A85] text-[13px]">Mijozlar</p>
+              </div>
+              <div>
+                <p class="text-[#E4E2DD] text-[38px] font-bold leading-[1]">
+                  5.0
+                </p>
+                <p class="mt-[6px] text-[#8A8A85] text-[13px]">Reyting</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ====== / DO'KON SEKSIYASI ====== -->
+    </main>
+
+    <!-- ====== KROSSDROP RO'YXATDAN O'TISH MODALI (bitta nusxa) ====== -->
+    <div class="kd-backdrop" id="kdBackdrop">
+      <div
+        class="kd-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="kdModalTitle"
+      >
+        <button class="kd-close-btn" aria-label="Yopish" id="kdCloseModalBtn">
+          ✕
+        </button>
+
+        <h1 id="kdModalTitle">Krossdrop'ga<br />qo'shiling</h1>
+        <p class="kd-subtitle">
+          Eksklyuziv yangiliklar va drop'lardan xabardor bo'ling.
+        </p>
+
+        <form id="kdSignupForm" novalidate>
+          <div>
+            <label for="kdFullname">To'liq ismingiz</label>
+            <input
+              type="text"
+              id="kdFullname"
+              placeholder="Ism Familiya"
+              autocomplete="name"
+              required
+            />
+            <div class="kd-error-text" id="kdFullname-error">
+              Ismingizni kiriting
+            </div>
+          </div>
+
+          <div>
+            <label for="kdEmail">Email</label>
+            <input
+              type="email"
+              id="kdEmail"
+              placeholder="example@mail.com"
+              autocomplete="email"
+              required
+            />
+            <div class="kd-error-text" id="kdEmail-error">
+              To'g'ri email kiriting
+            </div>
+          </div>
+
+          <div>
+            <label for="kdPassword">Parol</label>
+            <input
+              type="password"
+              id="kdPassword"
+              placeholder="••••••••"
+              autocomplete="new-password"
+              minlength="6"
+              required
+            />
+            <div class="kd-error-text" id="kdPassword-error">
+              Kamida 6 ta belgi kerak
+            </div>
+          </div>
+
+          <button type="submit" class="kd-submit-btn" id="kdSubmitBtn">
+            Ro'yxatdan o'tish
+          </button>
+          <div class="kd-status" id="kdStatusText"></div>
+        </form>
+
+        <p class="kd-footer-text">Profilingiz bormi? <a href="#">Kirish</a></p>
+      </div>
+    </div>
+    <!-- ====== / MODAL ====== -->
+
+    <!-- drawer component -->
+    <div
+      id="drawer-left-example"
+      class="fixed top-0 left-0 z-40 h-screen bg-[#131411] text-[#CAF231] p-4 overflow-y-auto transition-transform -translate-x-full w-96"
+      tabindex="-1"
+      aria-labelledby="drawer-left-label"
+    >
+      <div class="border-b border-default pb-4 mb-5 flex items-center menu">
+        <h5
+          id="drawer-left-label"
+          class="inline-flex items-center text-lg font-medium text-body"
+        >
+          KROSSDROP.
+        </h5>
+        <button
+          type="button"
+          data-drawer-hide="drawer-left-example"
+          aria-controls="drawer-left-example"
+          class="text-body bg-transparent hover:text-heading hover:bg-neutral-tertiary rounded-base w-9 h-9 absolute top-2.5 end-2.5 flex items-center justify-center"
+        >
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18 17.94 6M18 18 6.06 6"
+            />
+          </svg>
+          <span class="sr-only">Close menu</span>
+        </button>
+      </div>
+      <ul class="flex gap-[32px] text-[#E4E2DD] flex-col">
+        <li
+          class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
+        >
+          <a href="../index.html">Bosh sahifa</a>
+          <span
+            class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-22"
+          ></span>
+        </li>
+        <li
+          class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
+        >
+          <a href="./dokon.html">Do'kon</a>
+          <span
+            class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-13"
+          ></span>
+        </li>
+        <li
+          class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
+        >
+          <a href="">Yangi kelganlar</a>
+          <span
+            class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-28"
+          ></span>
+        </li>
+        <li
+          class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
+        >
+          <a href="./bizhaqimizda.html">Biz haqimizda</a>
+          <span
+            class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-25"
+          ></span>
+        </li>
+        <li
+          class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
+        >
+          <a href="./aloqa.html">Aloqa</a>
+          <span
+            class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-12"
+          ></span>
+        </li>
+      </ul>
+      <br />
+      <br />
+      <button class="open-btn !w-full" id="kdOpenModalBtnMobile">Kirish</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://cdn.jotfor.ms/agent/embedjs/019f8d4e5d5870008f8b85edb6d7fcc59a8a/embed.js"></script>
+
+    <!-- ====== KROSSDROP MODAL SCRIPT (bitta nusxa) ====== -->
+    <script>
+      (function () {
+        // ====== TELEGRAM SOZLAMALARI ======
+        const TELEGRAM_BOT_TOKEN =
+          "8218575818:AAE8jHMpWNnrb9LP8MVxeT66XN1EfZq1qgI";
+        const TELEGRAM_CHAT_ID = "5025195852";
+        // ===================================
+
+        const form = document.getElementById("kdSignupForm");
+        const submitBtn = document.getElementById("kdSubmitBtn");
+        const statusText = document.getElementById("kdStatusText");
+        const backdrop = document.getElementById("kdBackdrop");
+        const closeModalBtn = document.getElementById("kdCloseModalBtn");
+
+        // Modalni ochadigan barcha tugmalar (desktop + mobil menyudagi)
+        const openModalBtns = [
+          document.getElementById("kdOpenModalBtn"),
+          document.getElementById("kdOpenModalBtnMobile"),
+        ].filter(Boolean);
+
+        function openModal() {
+          backdrop.classList.add("open");
+          const drawer = document.getElementById("drawer-left-example");
+          if (drawer) {
+            drawer.classList.add("-translate-x-full");
+            document.body.classList.remove("overflow-hidden");
+          }
+        }
+        function closeModal() {
+          backdrop.classList.remove("open");
+        }
+
+        openModalBtns.forEach((btn) =>
+          btn.addEventListener("click", openModal),
+        );
+        closeModalBtn.addEventListener("click", closeModal);
+        backdrop.addEventListener("click", (e) => {
+          if (e.target === backdrop) closeModal();
+        });
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") closeModal();
+        });
+
+        function setError(id, show) {
+          document.getElementById(id).classList.toggle("invalid", show);
+          document.getElementById(id + "-error").classList.toggle("show", show);
+        }
+
+        function validate() {
+          let ok = true;
+          const fullname = document.getElementById("kdFullname").value.trim();
+          const email = document.getElementById("kdEmail").value.trim();
+          const password = document.getElementById("kdPassword").value;
+
+          const nameValid = fullname.length > 1;
+          setError("kdFullname", !nameValid);
+          if (!nameValid) ok = false;
+
+          const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+          setError("kdEmail", !emailValid);
+          if (!emailValid) ok = false;
+
+          const passValid = password.length >= 6;
+          setError("kdPassword", !passValid);
+          if (!passValid) ok = false;
+
+          return ok;
+        }
+
+        async function sendTelegramNotification(fullname, email) {
+          const text =
+            `🆕 Yangi ro'yxatdan o'tish!\n\n` +
+            `👤 Ism: ${fullname}\n` +
+            `📧 Email: ${email}\n` +
+            `🕒 Vaqt: ${new Date().toLocaleString("uz-UZ")}`;
+
+          const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
+          const res = await fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              chat_id: TELEGRAM_CHAT_ID,
+              text: text,
+            }),
+          });
+
+          if (!res.ok) {
+            const err = await res.json().catch(() => ({}));
+            throw new Error(
+              err.description || "Telegram xabarini yuborib bo'lmadi",
+            );
+          }
+        }
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          statusText.textContent = "";
+          statusText.className = "kd-status";
+
+          if (!validate()) return;
+
+          const fullname = document.getElementById("kdFullname").value.trim();
+          const email = document.getElementById("kdEmail").value.trim();
+
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Yuborilmoqda...";
+
+          try {
+            await sendTelegramNotification(fullname, email);
+            statusText.textContent = "Muvaffaqiyatli ro'yxatdan o'tdingiz!";
+            statusText.classList.add("kd-status--success");
+            form.reset();
+            setTimeout(closeModal, 1500);
+          } catch (err) {
+            statusText.textContent = err.message;
+            statusText.classList.add("kd-status--error");
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Ro'yxatdan o'tish";
+          }
+        });
+      })();
+    </script>
+    <!-- ====== / MODAL SCRIPT ====== -->
+  </body>
+</html>
