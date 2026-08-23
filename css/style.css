@@ -1,6 +1,168 @@
 * {
   font-family: Space Grotesk;
 }
+
+/* Barcha tugma va bosiladigan elementlarda qo'l kursori */
+button,
+[type="button"],
+[type="submit"],
+.cursor-pointer,
+summary,
+select,
+.thumb-btn,
+.color-btn,
+.size-btn,
+.cat-pill,
+.size-filter-btn,
+.chip-remove,
+.wish-btn {
+  cursor: pointer;
+}
+
+/* ====== GLOBAL RESPONSIVE + DIZAYN YAXSHILASH ====== */
+html {
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+img {
+  max-width: 100%;
+}
+
+/* Katta sarlavhalar endi ekran o'lchamiga qarab silliq masshtablanadi
+   (jump qiladigan qattiq breakpoint o'rniga uzluksiz o'sish). Har bir
+   qoida :where() ichida — shu bilan HTML'dagi mavjud max-[Npx]: qo'lda
+   qo'yilgan override'lar hamon ustunlik qiladi, bu esa faqat oraliqlarni
+   silliqlashtiradi. */
+:where([class*="text-[120px]"]) {
+  font-size: clamp(2.25rem, 5vw + 1.5rem, 7.5rem) !important;
+}
+:where([class*="text-[100px]"]) {
+  font-size: clamp(2.25rem, 5vw + 1.25rem, 6.25rem) !important;
+}
+:where([class*="text-[80px]"]) {
+  font-size: clamp(2rem, 4.5vw + 1rem, 5rem) !important;
+}
+:where([class*="text-[70px]"]) {
+  font-size: clamp(1.875rem, 4vw + 1rem, 4.375rem) !important;
+}
+:where([class*="text-[64px]"]) {
+  font-size: clamp(1.875rem, 3.5vw + 1rem, 4rem) !important;
+}
+:where([class*="text-[56px]"]) {
+  font-size: clamp(1.75rem, 3vw + 1rem, 3.5rem) !important;
+}
+:where([class*="text-[50px]"]) {
+  font-size: clamp(1.625rem, 2.8vw + 1rem, 3.125rem) !important;
+}
+:where([class*="text-[44px]"]) {
+  font-size: clamp(1.5rem, 2.5vw + 1rem, 2.75rem) !important;
+}
+:where([class*="text-[40px]"]) {
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem) !important;
+}
+:where([class*="text-[38px]"]) {
+  font-size: clamp(1.375rem, 2vw + 1rem, 2.375rem) !important;
+}
+:where([class*="text-[36px]"]) {
+  font-size: clamp(1.375rem, 2vw + 1rem, 2.25rem) !important;
+}
+:where([class*="text-[32px]"]) {
+  font-size: clamp(1.25rem, 1.5vw + 1rem, 2rem) !important;
+}
+
+/* Haddan tashqari katta section paddinglar kichik ekranlarda kamayadi */
+@media (max-width: 900px) {
+  :where([class*="py-[140px]"]) {
+    padding-top: 72px !important;
+    padding-bottom: 72px !important;
+  }
+  :where([class*="pt-[210px]"]) {
+    padding-top: 110px !important;
+  }
+  :where([class*="pb-[283px]"]) {
+    padding-bottom: 110px !important;
+  }
+  :where([class*="pt-[480px]"]) {
+    padding-top: 220px !important;
+  }
+  :where([class*="pt-[128px]"]) {
+    padding-top: 64px !important;
+  }
+  :where([class*="pt-[100px]"]) {
+    padding-top: 56px !important;
+  }
+  :where([class*="pt-[96px]"]) {
+    padding-top: 48px !important;
+  }
+  :where([class*="pb-[100px]"]) {
+    padding-bottom: 56px !important;
+  }
+}
+@media (max-width: 480px) {
+  :where([class*="py-[140px]"]) {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+  :where([class*="pt-[210px]"]) {
+    padding-top: 80px !important;
+  }
+  :where([class*="pb-[283px]"]) {
+    padding-bottom: 80px !important;
+  }
+  :where([class*="pt-[480px]"]) {
+    padding-top: 170px !important;
+  }
+}
+
+/* Mobil drawer juda tor telefonlarda ekrandan chiqib ketmasin */
+:where([class*="w-96"]).fixed {
+  max-width: 88vw;
+}
+
+/* ====== MAHSULOT KARTALARI: mayin dizayn yaxshilanishi ====== */
+#profile .max-w-\[285px\],
+#dashboard .max-w-\[285px\],
+#settings .max-w-\[285px\],
+#contacts .max-w-\[285px\],
+#Limited .max-w-\[285px\] {
+  transition: transform 0.35s ease;
+}
+#profile .max-w-\[285px\]:hover,
+#dashboard .max-w-\[285px\]:hover,
+#settings .max-w-\[285px\]:hover,
+#contacts .max-w-\[285px\]:hover,
+#Limited .max-w-\[285px\]:hover {
+  transform: translateY(-6px);
+}
+#profile .max-w-\[285px\] img,
+#dashboard .max-w-\[285px\] img,
+#settings .max-w-\[285px\] img,
+#contacts .max-w-\[285px\] img,
+#Limited .max-w-\[285px\] img {
+  transition: filter 0.35s ease;
+}
+#profile .max-w-\[285px\]:hover img,
+#dashboard .max-w-\[285px\]:hover img,
+#settings .max-w-\[285px\]:hover img,
+#contacts .max-w-\[285px\]:hover img,
+#Limited .max-w-\[285px\]:hover img {
+  filter: brightness(1.05);
+}
+
+.owl-carousel2 .item {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+.owl-carousel2 .item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+}
+/* ====== / GLOBAL RESPONSIVE + DIZAYN YAXSHILASH ====== */
+
 header {
   position: sticky;
   top: 0;
@@ -406,3 +568,498 @@ header {
   }
 }
 /* ====== / KROSSDROP MODAL ====== */
+
+/* Product category tabs */
+#default-tab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 7px;
+  border: 1px solid #e6e8dc;
+  border-radius: 9999px;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(0,0,0,.06);
+}
+
+#default-tab > li {
+  margin: 0 !important;
+}
+
+#default-tab .kd-tab {
+  min-width: 92px;
+  border-color: transparent !important;
+  color: #171717;
+  background: transparent;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  transition: all .25s ease;
+}
+
+#default-tab .kd-tab:hover {
+  background: #f4f7e8;
+  transform: translateY(-1px);
+}
+
+#default-tab .kd-tab[aria-selected="true"] {
+  color: #171e00 !important;
+  background: #CAF231 !important;
+  border-color: #CAF231 !important;
+  box-shadow: 0 5px 18px rgba(202,242,49,.28);
+}
+
+@media (max-width: 700px) {
+  #default-tab {
+    width: 100%;
+    justify-content: center;
+    border-radius: 22px;
+  }
+  #default-tab > li {
+    flex: 1 1 45%;
+  }
+  #default-tab .kd-tab {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* ===== Instagram hover cards ===== */
+.kd-insta-card {
+  position: relative;
+  display: block;
+  width: 205px;
+  height: 205px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #111;
+  text-decoration: none;
+}
+
+.kd-insta-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: filter .35s ease, transform .35s ease;
+}
+
+.kd-insta-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .01em;
+  background: rgba(12, 12, 14, .48);
+  opacity: 0;
+  transform: scale(.96);
+  transition: opacity .3s ease, transform .3s ease;
+  backdrop-filter: blur(1px);
+}
+
+.kd-insta-icon {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #CAF231;
+  border-radius: 50%;
+  color: #CAF231;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.kd-insta-card:hover .kd-insta-image,
+.kd-insta-card:focus-visible .kd-insta-image {
+  filter: blur(5px) brightness(.65);
+  transform: scale(1.05);
+}
+
+.kd-insta-card:hover .kd-insta-overlay,
+.kd-insta-card:focus-visible .kd-insta-overlay {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.kd-insta-card:focus-visible {
+  outline: 2px solid #CAF231;
+  outline-offset: 3px;
+}
+
+.kd-retro-image {
+  max-width: 520px !important;
+}
+
+@media (max-width: 910px) {
+  .kd-retro-image {
+    max-width: 520px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .kd-insta-card {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .kd-retro-image {
+    max-width: 100% !important;
+  }
+}
+/* ===== / Instagram hover cards ===== */
+
+/* =========================================================
+   KROSSDROP — FINAL RESPONSIVE PASS
+   Applies to index.html and all pages in /pages/
+   ========================================================= */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+body { min-width: 320px; }
+
+img, svg, video, canvas { max-width: 100%; }
+img { height: auto; }
+
+/* Shared page container */
+.max-w-\[1285px\] {
+  width: min(100%, 1285px);
+}
+
+/* Prevent long text / buttons from forcing horizontal scroll */
+h1, h2, h3, h4, h5, h6, p, a, button, label, span, li {
+  overflow-wrap: anywhere;
+}
+
+button, a, input, select, textarea { max-width: 100%; }
+
+/* Header */
+header .max-w-\[1285px\] { min-height: 48px; }
+header img { flex-shrink: 0; }
+
+/* Homepage product cards: fluid images with a stable visual ratio */
+#profile .max-w-\[285px\] img,
+#dashboard .max-w-\[285px\] img,
+#settings .max-w-\[285px\] img,
+#contacts .max-w-\[285px\] img,
+#Limited .max-w-\[285px\] img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.owl-carousel2 .item img {
+  width: 100%;
+  max-width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+/* Any grid should be allowed to shrink rather than overflow */
+.grid, [class*="grid-cols-"] {
+  min-width: 0;
+}
+
+/* Large decorative cards on the homepage */
+@media (max-width: 900px) {
+  :where([class*="pt-[480px]"]) {
+    padding-top: clamp(220px, 55vw, 360px) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .owl-carousel2 .item img { height: 125px; }
+
+  :where([class*="pt-[480px]"]) {
+    padding-top: 78vw !important;
+  }
+}
+
+/* Forms and footer stay usable on narrow screens */
+form { min-width: 0; }
+input, select, textarea { min-width: 0; }
+
+@media (max-width: 760px) {
+  header { padding-top: 12px !important; padding-bottom: 12px !important; }
+  header .max-w-\[1285px\] { padding-left: 14px; padding-right: 14px; }
+
+  header ul { gap: 12px !important; }
+  header ul img { width: 21px; height: 21px; }
+
+  #hero .owl-nav { display: none; }
+  #hero .owl-dots { bottom: 18px; padding: 0 14px; }
+}
+
+@media (max-width: 480px) {
+  .brands { padding: 24px 0; }
+  .brands-track span { font-size: 12px; gap: 32px; }
+  .brands-track span::after { margin-left: 24px; }
+
+  footer .max-w-\[1285px\] { padding-left: 16px; padding-right: 16px; }
+}
+
+/* =========================================================
+   ALOQA — readable typography + responsive store images
+   ========================================================= */
+
+.fig-contact {
+  --fc-bg: #0b0b0d;
+  --fc-card: #121216;
+  --fc-border: #28282d;
+  --fc-text: #e8e8dd;
+  --fc-muted: #898983;
+  --fc-accent: #caf231;
+}
+
+.fig-contact .fc-wrap {
+  width: min(100%, 1285px);
+  margin: 0 auto;
+  padding-left: clamp(16px, 2vw, 24px);
+  padding-right: clamp(16px, 2vw, 24px);
+}
+
+.fig-contact .fc-hero {
+  padding: clamp(72px, 7vw, 110px) 0 clamp(70px, 7vw, 105px);
+}
+
+.fig-contact .fc-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(360px, 520px);
+  gap: clamp(40px, 6vw, 90px);
+  align-items: center;
+}
+
+.fig-contact .fc-title {
+  font-size: clamp(58px, 7.2vw, 108px);
+  line-height: .88;
+  letter-spacing: -.045em;
+  margin-bottom: 30px;
+}
+
+.fig-contact .fc-copy {
+  max-width: 620px;
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.75;
+  margin-bottom: 30px;
+}
+
+.fig-contact .fc-contact-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 620px;
+}
+
+.fig-contact .fc-info {
+  padding: 18px 16px;
+  min-height: 78px;
+}
+
+.fig-contact .fc-info b {
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+
+.fig-contact .fc-info strong {
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.fig-contact .fc-info .fc-icon { font-size: 14px; }
+
+.fig-contact .fc-form-card {
+  padding: clamp(24px, 3vw, 34px);
+  border-radius: 18px;
+}
+
+.fig-contact .fc-form-title {
+  font-size: clamp(27px, 2.4vw, 34px);
+  margin-bottom: 22px;
+}
+
+.fig-contact .fc-form { gap: 16px; }
+.fig-contact .fc-two { gap: 14px; }
+
+.fig-contact label {
+  font-size: 11px;
+  letter-spacing: .08em;
+}
+
+.fig-contact input,
+.fig-contact select,
+.fig-contact textarea {
+  margin-top: 8px;
+  padding: 13px 14px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.fig-contact textarea { min-height: 125px; resize: vertical; }
+
+.fig-contact .fc-check {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.fig-contact .fc-check input { width: 14px; height: 14px; }
+
+.fig-contact .fc-submit {
+  padding: 14px 20px;
+  font-size: 13px;
+}
+
+.fig-contact .fc-social {
+  gap: 22px;
+  font-size: 11px;
+}
+
+.fig-contact .fc-stores { padding-bottom: clamp(70px, 7vw, 100px); }
+
+.fig-contact .fc-section-title {
+  font-size: clamp(36px, 4vw, 58px);
+  margin-bottom: clamp(28px, 3vw, 40px);
+}
+
+.fig-contact .fc-stores-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 1.6vw, 22px);
+}
+
+.fig-contact .fc-store {
+  min-width: 0;
+  min-height: 0;
+  border-radius: 14px;
+}
+
+.fig-contact .fc-store-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+}
+
+.fig-contact .fc-store-body {
+  padding: 20px 18px 18px;
+}
+
+.fig-contact .fc-store-tag {
+  font-size: 10px;
+  padding: 5px 9px;
+  margin-bottom: 12px;
+}
+
+.fig-contact .fc-store h3 {
+  font-size: clamp(24px, 2vw, 31px);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.fig-contact .fc-store p {
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.fig-contact .fc-store-meta {
+  padding-top: 18px;
+  font-size: 12px;
+}
+
+.fig-contact .fc-route {
+  margin-top: 13px;
+  padding: 10px 12px;
+  font-size: 11px;
+}
+
+.fig-contact .fc-faq {
+  padding: clamp(70px, 7vw, 105px) 0;
+}
+
+.fig-contact .fc-eyebrow {
+  font-size: 11px;
+  margin-bottom: 12px;
+}
+
+.fig-contact .fc-faq-grid { gap: 10px 20px; }
+
+.fig-contact summary {
+  padding: 18px 18px;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.fig-contact summary::after { font-size: 17px; }
+
+.fig-contact .fc-answer {
+  padding: 0 18px 18px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.fig-contact .fc-help {
+  margin-top: 36px;
+  padding: 20px;
+}
+
+.fig-contact .fc-help h3 { font-size: 20px; }
+.fig-contact .fc-help p { font-size: 13px; line-height: 1.5; }
+.fig-contact .fc-help a { padding: 10px 17px; font-size: 11px; }
+
+.fig-contact .fc-near { padding: 90px 0; }
+.fig-contact .fc-near-inner { min-height: 150px; }
+.fig-contact .fc-near h2 { font-size: clamp(34px, 4vw, 56px); }
+
+@media (max-width: 1050px) {
+  .fig-contact .fc-hero-grid { grid-template-columns: 1fr; gap: 45px; }
+  .fig-contact .fc-form-card { max-width: 720px; width: 100%; }
+  .fig-contact .fc-stores-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fig-contact .fc-store:last-child { grid-column: 1 / -1; max-width: calc(50% - 8px); }
+}
+
+@media (max-width: 760px) {
+  .fig-contact .fc-hero { padding-top: 58px; }
+  .fig-contact .fc-title { font-size: clamp(48px, 12vw, 72px); }
+  .fig-contact .fc-copy { font-size: 15px; }
+  .fig-contact .fc-contact-grid { grid-template-columns: 1fr; max-width: 100%; }
+  .fig-contact .fc-two { grid-template-columns: 1fr; }
+  .fig-contact .fc-stores-grid { grid-template-columns: 1fr; }
+  .fig-contact .fc-store:last-child { grid-column: auto; max-width: none; }
+  .fig-contact .fc-store-img { aspect-ratio: 16 / 9; }
+  .fig-contact .fc-faq-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .fig-contact .fc-wrap { padding-left: 14px; padding-right: 14px; }
+  .fig-contact .fc-hero { padding: 48px 0 58px; }
+  .fig-contact .fc-title { font-size: clamp(42px, 13vw, 58px); }
+  .fig-contact .fc-copy { font-size: 14px; line-height: 1.65; }
+  .fig-contact .fc-form-card { padding: 20px 16px; border-radius: 14px; }
+  .fig-contact .fc-form-title { font-size: 25px; }
+  .fig-contact .fc-store-body { padding: 18px 16px 16px; }
+  .fig-contact .fc-store h3 { font-size: 27px; }
+  .fig-contact .fc-store p { font-size: 13px; }
+  .fig-contact summary { padding: 16px 15px; font-size: 13px; }
+  .fig-contact .fc-answer { padding: 0 15px 16px; font-size: 12px; }
+  .fig-contact .fc-help { display: block; }
+  .fig-contact .fc-help a { display: inline-block; margin-top: 14px; }
+  .fig-contact .fc-near { padding: 65px 0; }
+}
+
+/* Respect users who disable motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

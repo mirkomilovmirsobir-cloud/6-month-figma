@@ -31,7 +31,21 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    />
     <link rel="stylesheet" href="../css/style.css" />
+  <style>
+      .team-photo {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+      }
+    </style>
   </head>
   <body>
     <header class="bg-[#0C0C0E] py-[17px]">
@@ -77,7 +91,7 @@
           <li
             class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
           >
-            <a href="">Yangi kelganlar</a>
+            <a href="./mahsulot.html">Yangi kelganlar</a>
             <span
               class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-full"
             ></span>
@@ -126,9 +140,8 @@
     </header>
     <main>
       <section
-        class="bg-[url(../images/bizhero.png)] bg-no-repeat bg-cover bg-center object-cover"
-      >
-        <div class="max-w-[1285px] w-full mx-auto px-5 pt-[100px]">
+        class="bg-[url(../images/bizhero.png)] bg-no-repeat bg-cover bg-center object-cover">
+        <div class="max-w-[1285px] w-full mx-auto px-5 pt-[100px]" data-aos="fade-up">
           <h2
             class="text-white text-[120px] font-bold max-[865px]:!text-[70px] max-[520px]:!text-[50px] max-[400px]:!text-[36px]"
           >
@@ -147,7 +160,7 @@
       <section class="py-[48px] bg-[#caf231]">
         <div
           class="max-w-[1285px] w-full mx-auto px-5 flex justify-between items-center max-[755px]:!flex-col"
-        >
+         data-aos="fade-up">
           <div>
             <h3 class="font-bold text-[#1B1B1F] text-[56px]">8+</h3>
             <p class="font-semibold text-[#1B1B1F] text-[14px]">
@@ -175,7 +188,7 @@
         </div>
       </section>
       <section class="py-[140px] bg-[#0C0C0E]">
-        <div class="max-w-[1285px] w-full mx-auto px-5">
+        <div class="max-w-[1285px] w-full mx-auto px-5" data-aos="fade-up">
           <div
             class="flex justify-center items-center gap-[74px] max-[1005px]:!flex-col"
           >
@@ -220,7 +233,7 @@
         </div>
       </section>
       <section class="py-[140px] bg-[#1A1D11]">
-        <div class="max-w-[1285px] w-full mx-auto px-5">
+        <div class="max-w-[1285px] w-full mx-auto px-5" data-aos="fade-up">
           <div class="owl-carousel owl-carousel3 owl-theme">
             <div
               class="item max-w-[300px] w-full py-[32px] rounded-[12px] bg-[#16161A99] pl-[32px]"
@@ -281,13 +294,13 @@
           BIZNING JAMOAMIZ
         </h2>
         <div
-          class="max-w-[1285px] w-full mx-auto px-5 pt-[64px] grid grid-cols-4 gap-[24px] max-[850px]:!grid-cols-2"
-        >
+          class="max-w-[1285px] w-full mx-auto px-5 pt-[64px] grid grid-cols-4 gap-[24px] max-[850px]:!grid-cols-2 max-[535px]:!grid-cols-1"
+         data-aos="fade-up">
           <div
-            class="max-w-[270px] w-full max-[850px]:!mx-auto max-[535px]:!max-w-[169px]"
+            class="max-w-[270px] w-full mx-auto"
           >
             <img
-              class="w-full h-[360px] object-cover rounded-[12px] max-[535px]:!h-[169px]"
+              class="team-photo rounded-[12px]"
               src="../images/bizjamoa1.jpg"
               alt=""
             />
@@ -298,10 +311,10 @@
           </div>
 
           <div
-            class="max-w-[270px] w-full max-[850px]:!mx-auto max-[535px]:!max-w-[169px]"
+            class="max-w-[270px] w-full mx-auto"
           >
             <img
-              class="w-full h-[360px] object-cover rounded-[12px] max-[535px]:!h-[169px]"
+              class="team-photo rounded-[12px]"
               src="../images/bizjamoa2.jpg"
               alt=""
             />
@@ -314,10 +327,10 @@
           </div>
 
           <div
-            class="max-w-[270px] w-full max-[850px]:!mx-auto max-[535px]:!max-w-[169px]"
+            class="max-w-[270px] w-full mx-auto"
           >
             <img
-              class="w-full h-[360px] object-cover rounded-[12px] max-[535px]:!h-[169px]"
+              class="team-photo rounded-[12px]"
               src="../images/bizjamoa3.jpg"
               alt=""
             />
@@ -330,10 +343,10 @@
           </div>
 
           <div
-            class="max-w-[270px] w-full max-[850px]:!mx-auto max-[535px]:!max-w-[169px]"
+            class="max-w-[270px] w-full mx-auto"
           >
             <img
-              class="w-full h-[360px] object-cover rounded-[12px] max-[535px]:!h-[169px]"
+              class="team-photo rounded-[12px]"
               src="../images/bizjamoa4.jpg"
               alt=""
             />
@@ -345,7 +358,7 @@
         </div>
       </section>
       <section class="bg-[#0C0C0E] py-[140px]">
-        <div class="max-w-[1285px] w-full mx-auto px-5">
+        <div class="max-w-[1285px] w-full mx-auto px-5" data-aos="fade-up">
           <div
             class="bg-[#CAF2310D] pt-[96px] pb-[64px] mx-[64px] rounded-[32px] !backdrop-blur-[56px] max-[500px]:!mx-[24px]"
           >
@@ -373,6 +386,90 @@
         </div>
       </section>
     </main>
+
+        <!-- ====== FOOTER ====== -->
+    <footer class="bg-[#0C0C0E] border-t border-[#1E1E1E] pt-[80px] max-[600px]:!pt-[48px]">
+      <div class="max-w-[1285px] mx-auto px-5">
+        <div
+          class="grid grid-cols-4 gap-[40px] pb-[64px] max-[900px]:!grid-cols-2 max-[500px]:!grid-cols-1 max-[900px]:!gap-[32px]"
+        >
+          <div>
+            <h3 class="text-white text-[16px] font-semibold uppercase tracking-[1px]">
+              Do'kon
+            </h3>
+            <ul class="mt-[20px] flex flex-col gap-[12px]">
+              <li><a href="../index.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Bosh sahifa</a></li>
+              <li><a href="./dokon.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Barcha krossovkalar</a></li>
+              <li><a href="./mahsulot.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Yangi kelganlar</a></li>
+              <li><a href="./dokon.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Chegirmalar</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-[16px] font-semibold uppercase tracking-[1px]">
+              Kompaniya
+            </h3>
+            <ul class="mt-[20px] flex flex-col gap-[12px]">
+              <li><a href="./bizhaqimizda.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Biz haqimizda</a></li>
+              <li><a href="./aloqa.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Do'konlarimiz</a></li>
+              <li><a href="#" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Karyera</a></li>
+              <li><a href="#" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Hamkorlar</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-[16px] font-semibold uppercase tracking-[1px]">
+              Yordam
+            </h3>
+            <ul class="mt-[20px] flex flex-col gap-[12px]">
+              <li><a href="./aloqa.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Aloqa</a></li>
+              <li><a href="#" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Yetkazib berish</a></li>
+              <li><a href="#" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Qaytarish shartlari</a></li>
+              <li><a href="#" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Tez-tez so'raladigan savollar</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-[16px] font-semibold uppercase tracking-[1px]">
+              Yangiliklar
+            </h3>
+            <p class="mt-[20px] text-[#8A8A85] text-[14px] leading-[1.6]">
+              Eksklyuziv chegirmalar va yangi dropla haqida birinchi bo'lib
+              xabar toping.
+            </p>
+            <form class="mt-[16px] flex gap-[8px]" id="footerNewsletterForm">
+              <input
+                type="email"
+                required
+                placeholder="Email manzilingiz"
+                class="w-full bg-[#131411] border border-[#26262A] rounded-[9999px] px-[16px] py-[10px] text-white text-[13px] outline-none focus:border-[#CAF231] duration-300"
+              />
+              <button
+                type="submit"
+                class="shrink-0 bg-[#CAF231] text-[#171E00] text-[13px] font-semibold rounded-[9999px] px-[20px] hover:bg-transparent hover:text-[#CAF231] border-2 border-[#CAF231] duration-300"
+              >
+                OK
+              </button>
+            </form>
+            <div class="flex gap-[16px] mt-[24px]">
+              <a href="#" class="text-[#8A8A85] text-[13px] hover:text-[#CAF231] duration-300">Instagram</a>
+              <a href="#" class="text-[#8A8A85] text-[13px] hover:text-[#CAF231] duration-300">Telegram</a>
+              <a href="#" class="text-[#8A8A85] text-[13px] hover:text-[#CAF231] duration-300">TikTok</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-[#1E1E1E] py-[24px] flex items-center justify-between gap-[16px] max-[600px]:!flex-col max-[600px]:!text-center"
+        >
+          <p class="text-[#5F5F63] text-[13px]">
+            © 2026 KROSSDROP. Barcha huquqlar himoyalangan.
+          </p>
+          <p class="text-[#5F5F63] text-[13px]">
+            Toshkent, O'zbekiston
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- ====== / FOOTER ====== -->
+
 
     <!-- ====== KROSSDROP RO'YXATDAN O'TISH MODALI (bitta nusxa) ====== -->
     <div class="kd-backdrop" id="kdBackdrop">
@@ -506,7 +603,7 @@
         <li
           class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
         >
-          <a href="">Yangi kelganlar</a>
+          <a href="./mahsulot.html">Yangi kelganlar</a>
           <span
             class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-28"
           ></span>
@@ -530,7 +627,7 @@
       </ul>
       <br />
       <br />
-      <button class="open-btn !w-full" id="kdOpenModalBtnMobile">Kirish</button>
+      <button class="open-btn !py-3 !w-full" id="kdOpenModalBtnMobile">Kirish</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
@@ -698,5 +795,35 @@
       })();
     </script>
     <!-- ====== / MODAL SCRIPT ====== -->
+  
+    <!-- ====== FOOTER NEWSLETTER SCRIPT ====== -->
+    <script>
+      (function () {
+        const form = document.getElementById("footerNewsletterForm");
+        if (!form) return;
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const btn = form.querySelector("button");
+          const original = btn.textContent;
+          btn.textContent = "✓";
+          form.reset();
+          setTimeout(() => (btn.textContent = original), 2000);
+        });
+      })();
+    </script>
+    <!-- ====== / FOOTER NEWSLETTER SCRIPT ====== -->
+
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+          duration: 800,
+          easing: "ease-out-cubic",
+          once: true,
+          offset: 80,
+        });
+      });
+    </script>
   </body>
 </html>

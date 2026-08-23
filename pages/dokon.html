@@ -31,6 +31,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
@@ -77,7 +81,7 @@
           <li
             class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
           >
-            <a href="">Yangi kelganlar</a>
+            <a href="./mahsulot.html">Yangi kelganlar</a>
             <span
               class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-full"
             ></span>
@@ -129,7 +133,7 @@
     <main>
       <!-- ====== DO'KON / KATALOG SEKSIYASI ====== -->
       <section class="bg-[#0C0C0E] pt-[48px] pb-[100px]">
-        <div class="max-w-[1285px] mx-auto px-5">
+        <div class="max-w-[1285px] mx-auto px-5" data-aos="fade-up">
           <!-- breadcrumb -->
           <nav class="text-[14px] text-[#8A8A85] flex items-center gap-2">
             <a href="../index.html" class="hover:text-[#CAF231] duration-300"
@@ -154,37 +158,44 @@
           <!-- kategoriya piltalari -->
           <div class="mt-[28px] flex gap-3 flex-wrap">
             <button
-              class="bg-[#CAF231] text-[#171E00] text-[14px] font-medium rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#CAF231] duration-300"
+              class="cat-pill bg-[#CAF231] text-[#171E00] text-[14px] font-medium rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#CAF231] duration-300"
+              data-category="Barcha"
             >
               Barcha
             </button>
             <button
-              class="text-[#E4E2DD] text-[14px] rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#26262A] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+              class="cat-pill text-[#E4E2DD] text-[14px] rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#26262A] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+              data-category="Yugurish"
             >
               Yugurish
             </button>
             <button
-              class="text-[#E4E2DD] text-[14px] rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#26262A] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+              class="cat-pill text-[#E4E2DD] text-[14px] rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#26262A] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+              data-category="Lifestyle"
             >
               Lifestyle
             </button>
             <button
-              class="text-[#E4E2DD] text-[14px] rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#26262A] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+              class="cat-pill text-[#E4E2DD] text-[14px] rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#26262A] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+              data-category="Basketbol"
             >
               Basketbol
             </button>
             <button
-              class="text-[#E4E2DD] text-[14px] rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#26262A] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+              class="cat-pill text-[#E4E2DD] text-[14px] rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#26262A] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+              data-category="Retro"
             >
               Retro
             </button>
             <button
-              class="text-[#E4E2DD] text-[14px] rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#26262A] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+              class="cat-pill text-[#E4E2DD] text-[14px] rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#26262A] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+              data-category="Skeyt"
             >
               Skeyt
             </button>
             <button
-              class="text-[#E4E2DD] text-[14px] rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#26262A] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+              class="cat-pill text-[#E4E2DD] text-[14px] rounded-[9999px] px-[26px] py-[10px] border-[2px] border-[#26262A] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+              data-category="Limited Edition"
             >
               Limited Edition
             </button>
@@ -211,7 +222,9 @@
                     >
                       <input
                         type="checkbox"
-                        class="w-[16px] h-[16px] accent-[#CAF231] bg-transparent"
+                        class="brand-check w-[16px] h-[16px] accent-[#CAF231] bg-transparent"
+                        value="Nike"
+                        checked
                       />
                       Nike
                     </label>
@@ -222,7 +235,8 @@
                     >
                       <input
                         type="checkbox"
-                        class="w-[16px] h-[16px] accent-[#CAF231] bg-transparent"
+                        class="brand-check w-[16px] h-[16px] accent-[#CAF231] bg-transparent"
+                        value="Adidas"
                       />
                       Adidas
                     </label>
@@ -233,7 +247,8 @@
                     >
                       <input
                         type="checkbox"
-                        class="w-[16px] h-[16px] accent-[#CAF231] bg-transparent"
+                        class="brand-check w-[16px] h-[16px] accent-[#CAF231] bg-transparent"
+                        value="Puma"
                       />
                       Puma
                     </label>
@@ -244,7 +259,8 @@
                     >
                       <input
                         type="checkbox"
-                        class="w-[16px] h-[16px] accent-[#CAF231] bg-transparent"
+                        class="brand-check w-[16px] h-[16px] accent-[#CAF231] bg-transparent"
+                        value="New Balance"
                       />
                       New Balance
                     </label>
@@ -264,42 +280,50 @@
                 </div>
                 <div class="mt-[16px] grid grid-cols-4 gap-[8px]">
                   <button
-                    class="h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                    class="size-filter-btn h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                    data-size="39"
                   >
                     39
                   </button>
                   <button
-                    class="h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                    class="size-filter-btn h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                    data-size="40"
                   >
                     40
                   </button>
                   <button
-                    class="h-[40px] rounded-[8px] border border-[#CAF231] text-[#CAF231] text-[14px] bg-[#CAF231]/10 duration-300"
+                    class="size-filter-btn h-[40px] rounded-[8px] border border-[#CAF231] text-[#CAF231] text-[14px] bg-[#CAF231]/10 duration-300"
+                    data-size="41"
                   >
                     41
                   </button>
                   <button
-                    class="h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                    class="size-filter-btn h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                    data-size="42"
                   >
                     42
                   </button>
                   <button
-                    class="h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                    class="size-filter-btn h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                    data-size="43"
                   >
                     43
                   </button>
                   <button
-                    class="h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                    class="size-filter-btn h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                    data-size="44"
                   >
                     44
                   </button>
                   <button
-                    class="h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                    class="size-filter-btn h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                    data-size="45"
                   >
                     45
                   </button>
                   <button
-                    class="h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                    class="size-filter-btn h-[40px] rounded-[8px] border border-[#26262A] text-[#B7B7B2] text-[14px] hover:border-[#CAF231] hover:text-[#CAF231] duration-300"
+                    data-size="46"
                   >
                     46
                   </button>
@@ -318,9 +342,11 @@
                 </div>
                 <input
                   type="range"
+                  id="priceRange"
                   min="500000"
                   max="5000000"
-                  value="3000000"
+                  step="10000"
+                  value="5000000"
                   class="w-full mt-[18px] accent-[#CAF231]"
                 />
                 <div
@@ -329,12 +355,18 @@
                   <span>500 000 so'm</span>
                   <span>5 000 000 so'm</span>
                 </div>
+                <p class="mt-[10px] text-[13px] text-[#CAF231]">
+                  Tanlangan: <span id="priceRangeValue">5 000 000</span> so'm
+                  gacha
+                </p>
                 <button
+                  id="applyFiltersBtn"
                   class="mt-[24px] w-full bg-[#CAF231] text-[#171E00] text-[14px] font-semibold tracking-[1px] uppercase rounded-[9999px] py-[14px] border-[2px] border-[#CAF231] hover:bg-transparent hover:text-[#CAF231] duration-[0.5s]"
                 >
                   Filtrni qo'llash
                 </button>
                 <button
+                  id="clearFiltersBtn"
                   class="mt-[14px] w-full text-[#8A8A85] text-[13px] underline hover:text-[#CAF231] duration-300"
                 >
                   Tozalash
@@ -348,21 +380,40 @@
               <div
                 class="flex items-center justify-between gap-4 flex-wrap pb-[20px]"
               >
-                <div class="flex gap-[10px] flex-wrap">
+                <div class="flex gap-[10px] flex-wrap" id="activeFilterChips">
                   <span
+                    id="chipNike"
                     class="flex items-center gap-[8px] text-[#B7B7B2] text-[13px] rounded-[9999px] px-[16px] py-[7px] border border-[#26262A]"
                   >
-                    Nike <span class="text-[#CAF231]">✕</span>
+                    Nike
+                    <button
+                      type="button"
+                      class="chip-remove text-[#CAF231]"
+                      data-remove="brand"
+                      data-value="Nike"
+                    >
+                      ✕
+                    </button>
                   </span>
                   <span
+                    id="chipSize41"
                     class="flex items-center gap-[8px] text-[#B7B7B2] text-[13px] rounded-[9999px] px-[16px] py-[7px] border border-[#26262A]"
                   >
-                    41-o'lcham <span class="text-[#CAF231]">✕</span>
+                    41-o'lcham
+                    <button
+                      type="button"
+                      class="chip-remove text-[#CAF231]"
+                      data-remove="size"
+                      data-value="41"
+                    >
+                      ✕
+                    </button>
                   </span>
                 </div>
                 <div class="flex items-center gap-[14px]">
                   <span class="text-[#8A8A85] text-[13px]">Saralash:</span>
                   <select
+                    id="sortSelect"
                     class="bg-transparent text-[#E4E2DD] text-[14px] border border-[#26262A] rounded-[9999px] px-[16px] py-[8px] outline-none"
                   >
                     <option class="bg-[#0C0C0E]">Eng yangilari</option>
@@ -371,26 +422,30 @@
                     <option class="bg-[#0C0C0E]">Ommabop</option>
                   </select>
                   <div class="flex items-center gap-[8px] text-[#CAF231]">
-                    <button class="text-[18px]">▦</button>
-                    <button class="text-[18px] text-[#4A4A4E]">▤</button>
+                    <button id="viewGridBtn" class="text-[18px]">▦</button>
+                    <button id="viewListBtn" class="text-[18px] text-[#4A4A4E]">▤</button>
                   </div>
                 </div>
               </div>
 
               <!-- mahsulotlar -->
               <div
+                id="productGrid"
                 class="grid grid-cols-3 gap-[24px] max-[1100px]:!grid-cols-2 max-[560px]:!grid-cols-1"
               >
                 <!-- card 1 -->
                 <article
-                  class="bg-[#141416] rounded-[16px] p-[16px] group hover:-translate-y-[6px] duration-[0.4s]"
+                  class="product-card bg-[#141416] rounded-[16px] p-[16px] group hover:-translate-y-[6px] duration-[0.4s]"
+                  data-brand="Nike"
+                  data-category="Lifestyle"
+                  data-price="1650000"
                 >
                   <div class="flex items-start justify-between">
                     <span
                       class="bg-[#CAF231] text-[#171E00] text-[11px] font-semibold rounded-[9999px] px-[12px] py-[4px]"
                       >YANGI</span
                     >
-                    <button class="text-[#8A8A85] hover:text-[#CAF231] duration-300">
+                    <button class="wish-btn text-[#8A8A85] hover:text-[#CAF231] duration-300">
                       ♡
                     </button>
                   </div>
@@ -398,7 +453,7 @@
                     class="mt-[10px] h-[190px] rounded-[12px] bg-[#1C1C1F] flex items-center justify-center overflow-hidden"
                   >
                     <img
-                      src="../images/product-1.png"
+                      src="../images/trend1.jpg"
                       alt="Nike Air Max Pulse"
                       class="max-h-[160px] object-contain group-hover:scale-[1.07] duration-[0.5s]"
                     />
@@ -419,14 +474,17 @@
 
                 <!-- card 2 -->
                 <article
-                  class="bg-[#141416] rounded-[16px] p-[16px] group hover:-translate-y-[6px] duration-[0.4s]"
+                  class="product-card bg-[#141416] rounded-[16px] p-[16px] group hover:-translate-y-[6px] duration-[0.4s]"
+                  data-brand="Adidas"
+                  data-category="Lifestyle"
+                  data-price="980000"
                 >
                   <div class="flex items-start justify-between">
                     <span
                       class="bg-[#FF6B6B] text-white text-[11px] font-semibold rounded-[9999px] px-[12px] py-[4px]"
                       >-20%</span
                     >
-                    <button class="text-[#8A8A85] hover:text-[#CAF231] duration-300">
+                    <button class="wish-btn text-[#8A8A85] hover:text-[#CAF231] duration-300">
                       ♡
                     </button>
                   </div>
@@ -434,7 +492,7 @@
                     class="mt-[10px] h-[190px] rounded-[12px] bg-[#1C1C1F] flex items-center justify-center overflow-hidden"
                   >
                     <img
-                      src="../images/product-2.png"
+                      src="../images/trend2.jpg"
                       alt="Adidas Forum Low"
                       class="max-h-[160px] object-contain group-hover:scale-[1.07] duration-[0.5s]"
                     />
@@ -455,14 +513,17 @@
 
                 <!-- card 3 -->
                 <article
-                  class="bg-[#141416] rounded-[16px] p-[16px] group hover:-translate-y-[6px] duration-[0.4s]"
+                  class="product-card bg-[#141416] rounded-[16px] p-[16px] group hover:-translate-y-[6px] duration-[0.4s]"
+                  data-brand="New Balance"
+                  data-category="Retro"
+                  data-price="2150000"
                 >
                   <div class="flex items-start justify-between">
                     <span
                       class="bg-white text-[#171E00] text-[11px] font-semibold rounded-[9999px] px-[12px] py-[4px]"
                       >LIMITED</span
                     >
-                    <button class="text-[#8A8A85] hover:text-[#CAF231] duration-300">
+                    <button class="wish-btn text-[#8A8A85] hover:text-[#CAF231] duration-300">
                       ♡
                     </button>
                   </div>
@@ -470,7 +531,7 @@
                     class="mt-[10px] h-[190px] rounded-[12px] bg-[#1C1C1F] flex items-center justify-center overflow-hidden"
                   >
                     <img
-                      src="../images/product-3.png"
+                      src="../images/trend3.jpg"
                       alt="NB 2002R Protection Pack"
                       class="max-h-[160px] object-contain group-hover:scale-[1.07] duration-[0.5s]"
                     />
@@ -488,14 +549,17 @@
 
                 <!-- card 4 -->
                 <article
-                  class="bg-[#141416] rounded-[16px] p-[16px] group hover:-translate-y-[6px] duration-[0.4s]"
+                  class="product-card bg-[#141416] rounded-[16px] p-[16px] group hover:-translate-y-[6px] duration-[0.4s]"
+                  data-brand="Nike"
+                  data-category="Basketbol"
+                  data-price="2500000"
                 >
                   <div class="flex items-start justify-between">
                     <span
                       class="bg-[#CAF231] text-[#171E00] text-[11px] font-semibold rounded-[9999px] px-[12px] py-[4px]"
                       >HIT</span
                     >
-                    <button class="text-[#8A8A85] hover:text-[#CAF231] duration-300">
+                    <button class="wish-btn text-[#8A8A85] hover:text-[#CAF231] duration-300">
                       ♡
                     </button>
                   </div>
@@ -503,7 +567,7 @@
                     class="mt-[10px] h-[190px] rounded-[12px] bg-[#1C1C1F] flex items-center justify-center overflow-hidden"
                   >
                     <img
-                      src="../images/product-4.png"
+                      src="../images/trend4.jpg"
                       alt="Air Jordan 1 High OG"
                       class="max-h-[160px] object-contain group-hover:scale-[1.07] duration-[0.5s]"
                     />
@@ -521,14 +585,17 @@
 
                 <!-- card 5 -->
                 <article
-                  class="bg-[#141416] rounded-[16px] p-[16px] group hover:-translate-y-[6px] duration-[0.4s]"
+                  class="product-card bg-[#141416] rounded-[16px] p-[16px] group hover:-translate-y-[6px] duration-[0.4s]"
+                  data-brand="Adidas"
+                  data-category="Lifestyle"
+                  data-price="3100000"
                 >
                   <div class="flex items-start justify-between">
                     <span
                       class="bg-white text-[#171E00] text-[11px] font-semibold rounded-[9999px] px-[12px] py-[4px]"
                       >LIMITED</span
                     >
-                    <button class="text-[#8A8A85] hover:text-[#CAF231] duration-300">
+                    <button class="wish-btn text-[#8A8A85] hover:text-[#CAF231] duration-300">
                       ♡
                     </button>
                   </div>
@@ -536,7 +603,7 @@
                     class="mt-[10px] h-[190px] rounded-[12px] bg-[#1C1C1F] flex items-center justify-center overflow-hidden"
                   >
                     <img
-                      src="../images/product-5.png"
+                      src="../images/kopsotilgan1.jpg"
                       alt="Yeezy Boost 350 V2"
                       class="max-h-[160px] object-contain group-hover:scale-[1.07] duration-[0.5s]"
                     />
@@ -554,14 +621,17 @@
 
                 <!-- card 6 -->
                 <article
-                  class="bg-[#141416] rounded-[16px] p-[16px] group hover:-translate-y-[6px] duration-[0.4s]"
+                  class="product-card bg-[#141416] rounded-[16px] p-[16px] group hover:-translate-y-[6px] duration-[0.4s]"
+                  data-brand="ASICS"
+                  data-category="Yugurish"
+                  data-price="1790000"
                 >
                   <div class="flex items-start justify-between">
                     <span
                       class="bg-[#CAF231] text-[#171E00] text-[11px] font-semibold rounded-[9999px] px-[12px] py-[4px]"
                       >YANGI</span
                     >
-                    <button class="text-[#8A8A85] hover:text-[#CAF231] duration-300">
+                    <button class="wish-btn text-[#8A8A85] hover:text-[#CAF231] duration-300">
                       ♡
                     </button>
                   </div>
@@ -569,7 +639,7 @@
                     class="mt-[10px] h-[190px] rounded-[12px] bg-[#1C1C1F] flex items-center justify-center overflow-hidden"
                   >
                     <img
-                      src="../images/product-6.png"
+                      src="../images/kopsotilgan2.jpg"
                       alt="ASICS Gel-Kayano 14"
                       class="max-h-[160px] object-contain group-hover:scale-[1.07] duration-[0.5s]"
                     />
@@ -660,6 +730,90 @@
       </section>
       <!-- ====== / DO'KON SEKSIYASI ====== -->
     </main>
+
+        <!-- ====== FOOTER ====== -->
+    <footer class="bg-[#0C0C0E] border-t border-[#1E1E1E] pt-[80px] max-[600px]:!pt-[48px]">
+      <div class="max-w-[1285px] mx-auto px-5">
+        <div
+          class="grid grid-cols-4 gap-[40px] pb-[64px] max-[900px]:!grid-cols-2 max-[500px]:!grid-cols-1 max-[900px]:!gap-[32px]"
+        >
+          <div>
+            <h3 class="text-white text-[16px] font-semibold uppercase tracking-[1px]">
+              Do'kon
+            </h3>
+            <ul class="mt-[20px] flex flex-col gap-[12px]">
+              <li><a href="../index.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Bosh sahifa</a></li>
+              <li><a href="./dokon.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Barcha krossovkalar</a></li>
+              <li><a href="./mahsulot.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Yangi kelganlar</a></li>
+              <li><a href="./dokon.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Chegirmalar</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-[16px] font-semibold uppercase tracking-[1px]">
+              Kompaniya
+            </h3>
+            <ul class="mt-[20px] flex flex-col gap-[12px]">
+              <li><a href="./bizhaqimizda.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Biz haqimizda</a></li>
+              <li><a href="./aloqa.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Do'konlarimiz</a></li>
+              <li><a href="#" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Karyera</a></li>
+              <li><a href="#" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Hamkorlar</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-[16px] font-semibold uppercase tracking-[1px]">
+              Yordam
+            </h3>
+            <ul class="mt-[20px] flex flex-col gap-[12px]">
+              <li><a href="./aloqa.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Aloqa</a></li>
+              <li><a href="#" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Yetkazib berish</a></li>
+              <li><a href="#" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Qaytarish shartlari</a></li>
+              <li><a href="#" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Tez-tez so'raladigan savollar</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-[16px] font-semibold uppercase tracking-[1px]">
+              Yangiliklar
+            </h3>
+            <p class="mt-[20px] text-[#8A8A85] text-[14px] leading-[1.6]">
+              Eksklyuziv chegirmalar va yangi dropla haqida birinchi bo'lib
+              xabar toping.
+            </p>
+            <form class="mt-[16px] flex gap-[8px]" id="footerNewsletterForm">
+              <input
+                type="email"
+                required
+                placeholder="Email manzilingiz"
+                class="w-full bg-[#131411] border border-[#26262A] rounded-[9999px] px-[16px] py-[10px] text-white text-[13px] outline-none focus:border-[#CAF231] duration-300"
+              />
+              <button
+                type="submit"
+                class="shrink-0 bg-[#CAF231] text-[#171E00] text-[13px] font-semibold rounded-[9999px] px-[20px] hover:bg-transparent hover:text-[#CAF231] border-2 border-[#CAF231] duration-300"
+              >
+                OK
+              </button>
+            </form>
+            <div class="flex gap-[16px] mt-[24px]">
+              <a href="#" class="text-[#8A8A85] text-[13px] hover:text-[#CAF231] duration-300">Instagram</a>
+              <a href="#" class="text-[#8A8A85] text-[13px] hover:text-[#CAF231] duration-300">Telegram</a>
+              <a href="#" class="text-[#8A8A85] text-[13px] hover:text-[#CAF231] duration-300">TikTok</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-[#1E1E1E] py-[24px] flex items-center justify-between gap-[16px] max-[600px]:!flex-col max-[600px]:!text-center"
+        >
+          <p class="text-[#5F5F63] text-[13px]">
+            © 2026 KROSSDROP. Barcha huquqlar himoyalangan.
+          </p>
+          <p class="text-[#5F5F63] text-[13px]">
+            Toshkent, O'zbekiston
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- ====== / FOOTER ====== -->
+
 
     <!-- ====== KROSSDROP RO'YXATDAN O'TISH MODALI (bitta nusxa) ====== -->
     <div class="kd-backdrop" id="kdBackdrop">
@@ -793,7 +947,7 @@
         <li
           class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
         >
-          <a href="">Yangi kelganlar</a>
+          <a href="./mahsulot.html">Yangi kelganlar</a>
           <span
             class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-28"
           ></span>
@@ -817,7 +971,7 @@
       </ul>
       <br />
       <br />
-      <button class="open-btn !w-full" id="kdOpenModalBtnMobile">Kirish</button>
+      <button class="open-btn !py-3 !w-full" id="kdOpenModalBtnMobile">Kirish</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
@@ -964,5 +1118,289 @@
       })();
     </script>
     <!-- ====== / MODAL SCRIPT ====== -->
+  
+    <!-- ====== FOOTER NEWSLETTER SCRIPT ====== -->
+    <script>
+      (function () {
+        const form = document.getElementById("footerNewsletterForm");
+        if (!form) return;
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const btn = form.querySelector("button");
+          const original = btn.textContent;
+          btn.textContent = "✓";
+          form.reset();
+          setTimeout(() => (btn.textContent = original), 2000);
+        });
+      })();
+    </script>
+    <!-- ====== / FOOTER NEWSLETTER SCRIPT ====== -->
+
+    <!-- ====== DO'KON SAHIFASI: FILTR + KO'RINISH + SEVIMLILAR SCRIPT ====== -->
+    <script>
+      (function () {
+        function showToast(message) {
+          let toast = document.getElementById("kdToast");
+          if (!toast) {
+            toast = document.createElement("div");
+            toast.id = "kdToast";
+            toast.style.cssText =
+              "position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:#CAF231;color:#171E00;padding:12px 24px;border-radius:9999px;font-size:14px;font-weight:600;z-index:9999;opacity:0;transition:opacity .3s ease, transform .3s ease;pointer-events:none;white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.35);";
+            document.body.appendChild(toast);
+          }
+          toast.textContent = message;
+          requestAnimationFrame(() => {
+            toast.style.opacity = "1";
+            toast.style.transform = "translateX(-50%) translateY(0)";
+          });
+          clearTimeout(toast._t);
+          toast._t = setTimeout(() => {
+            toast.style.opacity = "0";
+            toast.style.transform = "translateX(-50%) translateY(20px)";
+          }, 2200);
+        }
+
+        // --- Kategoriya piltalari: bitta tanlash ---
+        const activePillClasses = [
+          "bg-[#CAF231]",
+          "text-[#171E00]",
+          "border-[#CAF231]",
+        ];
+        const inactivePillClasses = [
+          "text-[#E4E2DD]",
+          "border-[#26262A]",
+        ];
+        const pills = document.querySelectorAll(".cat-pill");
+        pills.forEach((pill) => {
+          pill.addEventListener("click", () => {
+            pills.forEach((p) => {
+              p.classList.remove(...activePillClasses, "hover:border-[#CAF231]", "hover:text-[#CAF231]");
+              p.classList.add(...inactivePillClasses, "hover:border-[#CAF231]", "hover:text-[#CAF231]");
+            });
+            pill.classList.remove(...inactivePillClasses);
+            pill.classList.add(...activePillClasses);
+          });
+        });
+
+        // --- O'lcham filtri (sidebar): ko'p tanlash ---
+        document.querySelectorAll(".size-filter-btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const active = btn.classList.toggle("border-[#CAF231]");
+            btn.classList.toggle("text-[#CAF231]", active);
+            btn.classList.toggle("bg-[#CAF231]/10", active);
+            btn.classList.toggle("border-[#26262A]", !active);
+            btn.classList.toggle("text-[#B7B7B2]", !active);
+          });
+        });
+
+        // --- Narx slайderi: jonli qiymat ---
+        const priceRange = document.getElementById("priceRange");
+        const priceRangeValue = document.getElementById("priceRangeValue");
+        if (priceRange && priceRangeValue) {
+          priceRange.addEventListener("input", () => {
+            const val = parseInt(priceRange.value, 10).toLocaleString(
+              "uz-UZ",
+            );
+            priceRangeValue.textContent = val;
+          });
+        }
+
+        // --- Filtr chiplarini olib tashlash ---
+        document.querySelectorAll(".chip-remove").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const type = btn.dataset.remove;
+            const value = btn.dataset.value;
+            if (type === "brand") {
+              document.querySelectorAll(".brand-check").forEach((cb) => {
+                if (cb.value === value) cb.checked = false;
+              });
+            } else if (type === "size") {
+              document.querySelectorAll(".size-filter-btn").forEach((sb) => {
+                if (sb.dataset.size === value) {
+                  sb.classList.remove(
+                    "border-[#CAF231]",
+                    "text-[#CAF231]",
+                    "bg-[#CAF231]/10",
+                  );
+                  sb.classList.add("border-[#26262A]", "text-[#B7B7B2]");
+                }
+              });
+            }
+            btn.closest("span").remove();
+          });
+        });
+
+        // --- Filtr qo'llash / tozalash ---
+        const productCards = document.querySelectorAll(".product-card");
+
+        function getSelectedCategory() {
+          const activePill = Array.from(
+            document.querySelectorAll(".cat-pill"),
+          ).find((p) => p.classList.contains("bg-[#CAF231]"));
+          return activePill ? activePill.dataset.category : "Barcha";
+        }
+        function getSelectedBrands() {
+          return Array.from(
+            document.querySelectorAll(".brand-check:checked"),
+          ).map((cb) => cb.value);
+        }
+        function getMaxPrice() {
+          return priceRange ? parseInt(priceRange.value, 10) : 5000000;
+        }
+
+        function applyFilters() {
+          const category = getSelectedCategory();
+          const brands = getSelectedBrands();
+          const maxPrice = getMaxPrice();
+          let visibleCount = 0;
+
+          productCards.forEach((card) => {
+            const matchesCategory =
+              category === "Barcha" || card.dataset.category === category;
+            const matchesBrand =
+              brands.length === 0 || brands.includes(card.dataset.brand);
+            const matchesPrice =
+              parseInt(card.dataset.price, 10) <= maxPrice;
+
+            const visible = matchesCategory && matchesBrand && matchesPrice;
+            card.style.display = visible ? "" : "none";
+            if (visible) visibleCount++;
+          });
+
+          return visibleCount;
+        }
+
+        const applyBtn = document.getElementById("applyFiltersBtn");
+        if (applyBtn) {
+          applyBtn.addEventListener("click", () => {
+            const count = applyFilters();
+            showToast(`${count} ta mahsulot topildi`);
+          });
+        }
+
+        const clearBtn = document.getElementById("clearFiltersBtn");
+        if (clearBtn) {
+          clearBtn.addEventListener("click", () => {
+            document
+              .querySelectorAll(".brand-check")
+              .forEach((cb) => (cb.checked = false));
+            document.querySelectorAll(".size-filter-btn").forEach((sb) => {
+              sb.classList.remove(
+                "border-[#CAF231]",
+                "text-[#CAF231]",
+                "bg-[#CAF231]/10",
+              );
+              sb.classList.add("border-[#26262A]", "text-[#B7B7B2]");
+            });
+            pills.forEach((p) => {
+              p.classList.remove(...activePillClasses);
+              p.classList.add(...inactivePillClasses);
+            });
+            const barchaPill = document.querySelector(
+              '.cat-pill[data-category="Barcha"]',
+            );
+            if (barchaPill) {
+              barchaPill.classList.remove(...inactivePillClasses);
+              barchaPill.classList.add(...activePillClasses);
+            }
+            if (priceRange) {
+              priceRange.value = priceRange.max;
+              if (priceRangeValue) {
+                priceRangeValue.textContent = parseInt(
+                  priceRange.max,
+                  10,
+                ).toLocaleString("uz-UZ");
+              }
+            }
+            const chips = document.getElementById("activeFilterChips");
+            if (chips) chips.innerHTML = "";
+            productCards.forEach((card) => (card.style.display = ""));
+            showToast("Filtrlar tozalandi");
+          });
+        }
+
+        // --- Saralash ---
+        const sortSelect = document.getElementById("sortSelect");
+        const productGrid = document.getElementById("productGrid");
+        if (sortSelect && productGrid) {
+          sortSelect.addEventListener("change", () => {
+            const val = sortSelect.value;
+            const cards = Array.from(
+              productGrid.querySelectorAll(".product-card"),
+            );
+            if (val === "Arzondan qimmatga") {
+              cards.sort(
+                (a, b) =>
+                  parseInt(a.dataset.price, 10) -
+                  parseInt(b.dataset.price, 10),
+              );
+            } else if (val === "Qimmatdan arzonga") {
+              cards.sort(
+                (a, b) =>
+                  parseInt(b.dataset.price, 10) -
+                  parseInt(a.dataset.price, 10),
+              );
+            }
+            cards.forEach((card) => productGrid.appendChild(card));
+          });
+        }
+
+        // --- Ko'rinish: grid / ro'yxat ---
+        const viewGridBtn = document.getElementById("viewGridBtn");
+        const viewListBtn = document.getElementById("viewListBtn");
+        if (viewGridBtn && viewListBtn && productGrid) {
+          viewGridBtn.addEventListener("click", () => {
+            productGrid.classList.remove("grid-cols-1");
+            productGrid.classList.add(
+              "grid-cols-3",
+              "max-[1100px]:!grid-cols-2",
+              "max-[560px]:!grid-cols-1",
+            );
+            viewGridBtn.classList.add("text-[#CAF231]");
+            viewGridBtn.classList.remove("text-[#4A4A4E]");
+            viewListBtn.classList.add("text-[#4A4A4E]");
+            viewListBtn.classList.remove("text-[#CAF231]");
+          });
+          viewListBtn.addEventListener("click", () => {
+            productGrid.classList.remove(
+              "grid-cols-3",
+              "max-[1100px]:!grid-cols-2",
+              "max-[560px]:!grid-cols-1",
+            );
+            productGrid.classList.add("grid-cols-1");
+            viewListBtn.classList.add("text-[#CAF231]");
+            viewListBtn.classList.remove("text-[#4A4A4E]");
+            viewGridBtn.classList.add("text-[#4A4A4E]");
+            viewGridBtn.classList.remove("text-[#CAF231]");
+          });
+        }
+
+        // --- Sevimlilar (layk) ---
+        document.querySelectorAll(".wish-btn").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const active = btn.classList.toggle("text-[#CAF231]");
+            btn.textContent = active ? "♥" : "♡";
+          });
+        });
+
+        // Sahifa ochilganda barcha mahsulotlar ko'rinadi; filtr faqat
+        // "Filtrni qo'llash" bosilganda ishga tushadi.
+      })();
+    </script>
+    <!-- ====== / DO'KON SAHIFASI SCRIPT ====== -->
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+          duration: 800,
+          easing: "ease-out-cubic",
+          once: true,
+          offset: 80,
+        });
+      });
+    </script>
   </body>
 </html>

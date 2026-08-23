@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="uz">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sneakers</title>
+    <title>Aloqa — KROSSDROP.</title>
     <link rel="icon" type="image/png" href="../images/nikeicon.png" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
@@ -31,8 +31,67 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    />
     <link rel="stylesheet" href="../css/style.css" />
-  </head>
+    <style>
+      .kd-contact-hero{background:#0c0c0e;padding:110px 0 120px;border-bottom:1px solid #202022}
+      .kd-contact-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 520px;gap:90px;align-items:center}
+      .kd-eyebrow{color:#caf231;font-size:12px;letter-spacing:.18em;font-weight:700;margin:0 0 18px}
+      .kd-contact-title{color:#fff;font-size:clamp(54px,7vw,104px);line-height:.88;letter-spacing:-.055em;font-weight:800;margin:0}
+      .kd-contact-title span,.kd-details-intro h2 span{color:#caf231}
+      .kd-contact-lead{max-width:560px;color:#8a8a85;font-size:16px;line-height:1.7;margin:32px 0 38px}
+      .kd-contact-meta{display:flex;gap:34px;flex-wrap:wrap}
+      .kd-contact-meta-item{display:flex;gap:12px;align-items:center;color:#fff;text-decoration:none}.kd-contact-meta-item:hover strong{color:#caf231}
+      .kd-contact-icon{width:40px;height:40px;border:1px solid #303033;border-radius:50%;display:grid;place-items:center;color:#caf231;font-weight:700}
+      .kd-contact-meta-item small{display:block;color:#68686b;font-size:10px;letter-spacing:.14em;margin-bottom:4px}.kd-contact-meta-item strong{font-size:14px;font-weight:500;transition:.3s}
+      .kd-contact-card{background:#151515;border:1px solid #29292b;padding:32px;box-shadow:0 24px 70px rgba(0,0,0,.3)}
+      .kd-card-head{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid #2a2a2c;padding-bottom:22px;margin-bottom:24px}.kd-card-head h3{color:#fff;font-size:30px;margin:0;font-weight:700}.kd-card-star{color:#caf231;font-size:28px}
+      .kd-contact-form{display:grid;gap:17px}.kd-contact-form label{color:#aaa9a5;font-size:12px;letter-spacing:.04em}.kd-contact-form input,.kd-contact-form select,.kd-contact-form textarea{display:block;width:100%;margin-top:8px;background:#0f0f10;border:1px solid #2b2b2d;color:#fff;padding:13px 15px;outline:none;font:inherit;font-size:14px;transition:.25s}.kd-contact-form textarea{resize:vertical;min-height:105px}.kd-contact-form input:focus,.kd-contact-form select:focus,.kd-contact-form textarea:focus{border-color:#caf231}.kd-contact-form select option{background:#111}
+      .kd-contact-submit{margin-top:4px;background:#caf231;color:#171e00;border:2px solid #caf231;border-radius:9999px;padding:14px 22px;font-size:13px;font-weight:800;letter-spacing:.04em;display:flex;justify-content:space-between;align-items:center;cursor:pointer;transition:.3s}.kd-contact-submit:hover{background:transparent;color:#caf231}.kd-contact-status{min-height:18px;margin:0;color:#caf231;font-size:12px}
+      .kd-stores-section{background:#131411;padding:110px 0}.kd-section-heading{display:flex;justify-content:space-between;gap:50px;align-items:end;margin-bottom:48px}.kd-section-heading h2{font-size:clamp(42px,5vw,72px);line-height:.95;color:#fff;margin:0;font-weight:800;letter-spacing:-.04em}.kd-section-heading>p{max-width:420px;color:#777773;font-size:14px;line-height:1.7;margin:0}
+      .kd-store-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.kd-store-card{min-height:290px;background:#0d0d0f;border:1px solid #28282a;padding:28px;display:flex;flex-direction:column;justify-content:space-between;transition:.3s}.kd-store-card:hover{transform:translateY(-5px);border-color:#4b4b4d}.kd-store-card-accent{background:#caf231;border-color:#caf231}.kd-store-card-accent .kd-store-number,.kd-store-card-accent .kd-store-city,.kd-store-card-accent h3,.kd-store-card-accent p,.kd-store-card-accent .kd-store-bottom{color:#171e00}.kd-store-number{color:#caf231;font-size:12px;font-weight:700;letter-spacing:.12em}.kd-store-city{display:block;color:#777773;font-size:10px;letter-spacing:.16em;margin-bottom:12px}.kd-store-content h3{color:#fff;font-size:25px;line-height:1.1;margin:0 0 12px;font-weight:700}.kd-store-content p{color:#777773;font-size:13px;line-height:1.6;margin:0}.kd-store-bottom{border-top:1px solid #29292b;margin-top:26px;padding-top:16px;display:flex;justify-content:space-between;gap:10px;color:#888;font-size:11px}.kd-store-bottom a{color:#caf231;text-decoration:none;font-weight:700}.kd-store-card-accent .kd-store-bottom{border-color:rgba(23,30,0,.2)}.kd-store-card-accent .kd-store-bottom a{color:#171e00}
+      .kd-contact-details{background:#0c0c0e;padding:120px 0}.kd-details-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px}.kd-details-intro h2{color:#fff;font-size:clamp(48px,6vw,82px);line-height:.9;letter-spacing:-.05em;margin:0 0 26px;font-weight:800}.kd-details-intro>p:last-child{max-width:480px;color:#777773;font-size:14px;line-height:1.8}.kd-info-list{border-top:1px solid #2a2a2c}.kd-info-row{display:flex;justify-content:space-between;gap:20px;padding:23px 0;border-bottom:1px solid #2a2a2c}.kd-info-row span{color:#68686b;font-size:10px;letter-spacing:.16em}.kd-info-row strong,.kd-info-row a{color:#eee;text-decoration:none;font-size:14px;font-weight:500;text-align:right}.kd-info-row a:hover{color:#caf231}
+      @media(max-width:1000px){.kd-contact-hero-grid{grid-template-columns:1fr;gap:55px}.kd-contact-card{max-width:650px}.kd-store-grid{grid-template-columns:1fr 1fr}.kd-details-grid{grid-template-columns:1fr;gap:55px}}
+      @media(max-width:650px){.kd-contact-hero{padding:70px 0 80px}.kd-contact-title{font-size:52px}.kd-contact-meta{gap:18px;flex-direction:column}.kd-contact-card{padding:22px}.kd-stores-section,.kd-contact-details{padding:75px 0}.kd-section-heading{display:block}.kd-section-heading>p{margin-top:22px}.kd-store-grid{grid-template-columns:1fr}.kd-store-card{min-height:250px}.kd-info-row{display:block}.kd-info-row strong,.kd-info-row a{display:block;text-align:left;margin-top:8px}.kd-details-intro h2{font-size:54px}}
+    </style>
+
+  
+    <style>
+      /* Final readability/responsive overrides are kept here too so aloqa.html
+         remains correct even when opened independently. */
+      .fig-contact .fc-copy{font-size:clamp(15px,1.2vw,18px)!important;line-height:1.75!important}
+      .fig-contact .fc-info b{font-size:11px!important}
+      .fig-contact .fc-info strong{font-size:14px!important}
+      .fig-contact .fc-form-title{font-size:clamp(27px,2.4vw,34px)!important}
+      .fig-contact label{font-size:11px!important}
+      .fig-contact input,.fig-contact select,.fig-contact textarea{font-size:14px!important;padding:13px 14px!important}
+      .fig-contact .fc-check{font-size:12px!important}
+      .fig-contact .fc-submit{font-size:13px!important;padding:14px 20px!important}
+      .fig-contact .fc-social{font-size:11px!important}
+      .fig-contact .fc-section-title{font-size:clamp(36px,4vw,58px)!important}
+      .fig-contact .fc-store-tag{font-size:10px!important}
+      .fig-contact .fc-store h3{font-size:clamp(24px,2vw,31px)!important}
+      .fig-contact .fc-store p{font-size:13px!important;line-height:1.65!important}
+      .fig-contact .fc-store-meta{font-size:12px!important}
+      .fig-contact .fc-route{font-size:11px!important;padding:10px 12px!important}
+      .fig-contact summary{font-size:14px!important;padding:18px!important}
+      .fig-contact .fc-answer{font-size:13px!important;padding:0 18px 18px!important}
+      .fig-contact .fc-help h3{font-size:20px!important}
+      .fig-contact .fc-help p{font-size:13px!important}
+      .fig-contact .fc-help a{font-size:11px!important}
+      .fig-contact .fc-near h2{font-size:clamp(34px,4vw,56px)!important}
+      .fig-contact .fc-store-img{height:auto!important;aspect-ratio:16/9!important;object-fit:cover!important}
+      @media(max-width:760px){
+        .fig-contact .fc-two{grid-template-columns:1fr!important}
+        .fig-contact .fc-stores-grid{grid-template-columns:1fr!important}
+        .fig-contact .fc-store:last-child{grid-column:auto!important;max-width:none!important}
+        .fig-contact .fc-faq-grid{grid-template-columns:1fr!important}
+      }
+    </style>
+</head>
   <body>
     <header class="bg-[#0C0C0E] py-[17px]">
       <div
@@ -77,7 +136,7 @@
           <li
             class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
           >
-            <a href="">Yangi kelganlar</a>
+            <a href="./mahsulot.html">Yangi kelganlar</a>
             <span
               class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-full"
             ></span>
@@ -127,24 +186,292 @@
       </div>
     </header>
     <main>
-      <section class="bg-[#0C0C0E]">
-        <div class="max-w-[1285px] mx-auto px-5">
-          <div>
-            <h2>GAPLASHAMIZMI? <br />ALOQA</h2>
-          </div>
-          <div class="max-w-[605px] w-full"></div>
-        </div>
-      </section>
-      <section class="py-[140px] bg-[#0C0C0E]">
-        <h2 class="text-center text-[56px] font-bold text-white">DO'KONLARIMIZ</h2>
-        <div class="max-w-[1285px] w-full mx-auto px-5">
-            <div>
-                <img src="" alt="">
-                
+      <style>
+        .fig-contact{background:#0b0b0d;color:#e9e8df}
+        .fig-contact *{box-sizing:border-box}
+        .fig-contact .fc-wrap{max-width:1285px;margin:0 auto;padding:0 22px}
+        .fig-contact .fc-hero{padding:58px 0 48px;background:#0b0b0d}
+        .fig-contact .fc-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,520px);gap:42px;align-items:start}
+        .fig-contact .fc-title{font-family:'Archivo Narrow',sans-serif;font-size:clamp(62px,7.5vw,104px);line-height:.82;letter-spacing:-.045em;font-weight:700;margin:0 0 28px;color:#e8e8dd;text-transform:uppercase}
+        .fig-contact .fc-title span{color:#dfe3d2}
+        .fig-contact .fc-copy{max-width:520px;color:#8b8b86;font-size:13px;line-height:1.65;margin:0 0 25px}
+        .fig-contact .fc-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:520px}
+        .fig-contact .fc-info{background:#121216;border:1px solid #25252a;border-radius:9px;padding:16px 14px;min-height:68px}
+        .fig-contact .fc-info b{display:block;color:#dfe3d2;font-size:9px;letter-spacing:.08em;margin-bottom:7px;font-weight:500}
+        .fig-contact .fc-info strong{display:block;color:#b7b7b2;font-size:10px;font-weight:400}
+        .fig-contact .fc-info .fc-icon{color:#caf231;margin-right:7px;font-size:12px}
+        .fig-contact .fc-form-card{background:linear-gradient(145deg,#161617,#111113);border:1px solid #29292d;border-radius:15px;padding:25px 24px 24px;box-shadow:0 20px 55px rgba(0,0,0,.2)}
+        .fig-contact .fc-form-title{color:#deded5;font-family:'Archivo Narrow',sans-serif;font-size:27px;font-weight:700;margin:0 0 18px;text-transform:uppercase}
+        .fig-contact .fc-form{display:grid;gap:12px}
+        .fig-contact .fc-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+        .fig-contact label{display:block;color:#96968f;font-size:8px;letter-spacing:.08em;text-transform:uppercase}
+        .fig-contact input,.fig-contact select,.fig-contact textarea{width:100%;margin-top:7px;background:#09090b;border:1px solid #18181b;border-radius:12px;color:#c9c9c2;padding:10px 12px;font-family:'Space Grotesk',sans-serif;font-size:9px;outline:none}
+        .fig-contact input:focus,.fig-contact select:focus,.fig-contact textarea:focus{border-color:#caf231}
+        .fig-contact textarea{min-height:62px;resize:vertical}
+        .fig-contact .fc-check{display:flex;align-items:center;gap:7px;color:#7c7c78;font-size:8px;text-transform:none;letter-spacing:0}
+        .fig-contact .fc-check input{width:10px;height:10px;margin:0;accent-color:#caf231}
+        .fig-contact .fc-submit{width:100%;border:0;border-radius:999px;background:#caf231;color:#1b2200;padding:11px 18px;font-size:9px;font-weight:700;letter-spacing:.08em;cursor:pointer;transition:.25s}
+        .fig-contact .fc-submit:hover{background:#d9ff4c}
+        .fig-contact .fc-social{display:flex;gap:25px;margin:28px 0 0;color:#a1a19a;font-size:7px;letter-spacing:.1em;text-transform:uppercase}
+        .fig-contact .fc-social a{color:inherit;text-decoration:none}
+        .fig-contact .fc-social a:hover{color:#caf231}
+
+        .fig-contact .fc-stores{padding:0 0 74px;background:#0b0b0d}
+        .fig-contact .fc-section-title{text-align:center;font-family:'Archivo Narrow',sans-serif;color:#e6e6dd;font-size:35px;line-height:1;font-weight:700;margin:0 0 34px;text-transform:uppercase}
+        .fig-contact .fc-stores-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+        .fig-contact .fc-store{background:#121216;border:1px solid #26262b;border-radius:12px;overflow:hidden;min-height:430px;display:flex;flex-direction:column}
+        .fig-contact .fc-store-img{height:205px;width:100%;object-fit:cover;object-position:center;display:block;filter:brightness(.72) saturate(.9)}
+        .fig-contact .fc-store-body{padding:15px 14px 14px;display:flex;flex-direction:column;flex:1}
+        .fig-contact .fc-store-tag{display:inline-block;color:#caf231;font-size:7px;letter-spacing:.1em;border:1px solid #8eac1e;border-radius:999px;padding:4px 7px;margin-bottom:9px;align-self:flex-start}
+        .fig-contact .fc-store h3{font-family:'Archivo Narrow',sans-serif;color:#deded5;font-size:24px;margin:0 0 9px;text-transform:uppercase}
+        .fig-contact .fc-store p{color:#7e7e79;font-size:8px;line-height:1.55;margin:0}
+        .fig-contact .fc-store-meta{margin-top:auto;padding-top:14px;color:#a2a29c;font-size:8px;display:flex;align-items:center;gap:5px}
+        .fig-contact .fc-route{margin-top:11px;border:1px solid #566217;color:#c8d77d;border-radius:999px;text-align:center;padding:7px;font-size:7px;text-decoration:none;letter-spacing:.04em}
+
+        .fig-contact .fc-faq{background:#0d1104;padding:72px 0 68px}
+        .fig-contact .fc-eyebrow{text-align:center;color:#9baa39;font-size:8px;letter-spacing:.18em;text-transform:uppercase;margin:0 0 10px}
+        .fig-contact .fc-faq .fc-section-title{margin-bottom:32px}
+        .fig-contact .fc-faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px 20px}
+        .fig-contact details{background:#121311;border:1px solid #272a21;border-radius:9px;color:#d1d1c9}
+        .fig-contact summary{cursor:pointer;list-style:none;padding:14px 15px;font-size:9px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+        .fig-contact summary::-webkit-details-marker{display:none}
+        .fig-contact summary::after{content:'⌄';color:#b8ce38;font-size:12px}
+        .fig-contact details[open] summary::after{content:'⌃'}
+        .fig-contact .fc-answer{padding:0 15px 14px;color:#85857f;font-size:8px;line-height:1.6}
+        .fig-contact .fc-help{margin-top:32px;border:1px solid #272a21;background:#121311;border-radius:12px;padding:17px 18px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+        .fig-contact .fc-help h3{margin:0 0 4px;color:#dcdcd4;font-family:'Archivo Narrow',sans-serif;font-size:15px;text-transform:none}
+        .fig-contact .fc-help p{margin:0;color:#81817b;font-size:8px}
+        .fig-contact .fc-help a{border:1px solid #a9c82d;color:#c8df43;border-radius:999px;padding:8px 17px;text-decoration:none;font-size:8px;white-space:nowrap}
+
+        .fig-contact .fc-near{background:#111113;padding:84px 0 92px;text-align:center;border-top:1px solid #171719}
+        .fig-contact .fc-near-inner{position:relative;max-width:900px;margin:0 auto;min-height:120px;display:flex;align-items:center;justify-content:center}
+        .fig-contact .fc-near h2{font-family:'Archivo Narrow',sans-serif;color:#ecece3;font-size:37px;text-transform:uppercase;margin:0}
+        .fig-contact .fc-dot{position:absolute;width:12px;height:12px;border-radius:50%;background:#caf231;box-shadow:0 0 16px 4px rgba(202,242,49,.28)}
+        .fig-contact .fc-dot:after{content:'';position:absolute;width:4px;height:4px;background:#222800;border-radius:50%;left:4px;top:4px}
+        .fig-contact .fc-dot.d1{left:18%;top:15%}.fig-contact .fc-dot.d2{right:19%;top:53%}.fig-contact .fc-dot.d3{left:48%;bottom:8%}
+
+        @media(max-width:900px){
+          .fig-contact .fc-hero-grid{grid-template-columns:1fr;gap:25px}
+          .fig-contact .fc-title{font-size:66px}
+          .fig-contact .fc-form-card{max-width:none}
+          .fig-contact .fc-stores-grid{grid-template-columns:1fr 1fr}
+        }
+        @media(max-width:600px){
+          .fig-contact .fc-wrap{padding:0 8px}
+          .fig-contact .fc-hero{padding:31px 0 30px}
+          .fig-contact .fc-title{font-size:51px;line-height:.84;margin-bottom:18px}
+          .fig-contact .fc-copy{font-size:9px;line-height:1.7;margin-bottom:17px}
+          .fig-contact .fc-contact-grid{grid-template-columns:1fr;gap:8px}
+          .fig-contact .fc-info{padding:12px 11px;min-height:54px}
+          .fig-contact .fc-form-card{padding:18px 15px 17px;border-radius:12px}
+          .fig-contact .fc-form-title{font-size:21px;margin-bottom:14px}
+          .fig-contact .fc-two{grid-template-columns:1fr 1fr;gap:7px}
+          .fig-contact .fc-social{margin-top:18px;gap:17px}
+          .fig-contact .fc-stores{padding-bottom:45px}
+          .fig-contact .fc-section-title{font-size:27px;margin-bottom:20px}
+          .fig-contact .fc-stores-grid{grid-template-columns:1fr;gap:10px}
+          .fig-contact .fc-store{min-height:365px}
+          .fig-contact .fc-store-img{height:145px}
+          .fig-contact .fc-faq{padding:52px 0 48px}
+          .fig-contact .fc-faq-grid{grid-template-columns:1fr;gap:7px}
+          .fig-contact .fc-help{display:block;padding:15px}
+          .fig-contact .fc-help a{display:inline-block;margin-top:13px}
+          .fig-contact .fc-near{padding:60px 0 65px}
+          .fig-contact .fc-near-inner{min-height:100px}
+          .fig-contact .fc-near h2{font-size:29px}
+          .fig-contact .fc-dot{width:10px;height:10px}.fig-contact .fc-dot:after{width:3px;height:3px;left:3.5px;top:3.5px}
+        }
+      </style>
+
+      <div class="fig-contact">
+        <section class="fc-hero">
+          <div class="fc-wrap" data-aos="fade-up">
+            <div class="fc-hero-grid">
+              <div>
+                <h1 class="fc-title">GAPLASHAM<br />IZMI?<br /><span>ALOQA</span></h1>
+                <p class="fc-copy">Savolingiz bormi? Jamomiz 7 kun davomida siz bilan aloqada bo'ladi. Har qanday masala bo'yicha bizga murojaat qiling.</p>
+                <div class="fc-contact-grid">
+                  <a class="fc-info" href="tel:+998712000000"><b><span class="fc-icon">⌕</span> TELEFON</b><strong>+998 71 200 00 00</strong></a>
+                  <a class="fc-info" href="mailto:salom@krossdrop.uz"><b><span class="fc-icon">✉</span> EMAIL</b><strong>salom@krossdrop.uz</strong></a>
+                  <div class="fc-info"><b><span class="fc-icon">⌖</span> MANZIL</b><strong>Amir Temur ko'chasi, 15-uy</strong></div>
+                  <a class="fc-info" href="#"><b><span class="fc-icon">▷</span> TELEGRAM</b><strong>@krossdrop_uz</strong></a>
+                </div>
+                <nav class="fc-social" aria-label="Ijtimoiy tarmoqlar">
+                  <a href="#">Instagram</a><a href="#">Telegram</a><a href="#">YouTube</a><a href="#">TikTok</a>
+                </nav>
+              </div>
+
+              <div class="fc-form-card">
+                <h2 class="fc-form-title">XABAR YUBORING</h2>
+                <form id="kdContactForm" class="fc-form">
+                  <div class="fc-two">
+                    <label>ISMINGIZ<input name="name" type="text" placeholder="Ali Valiyev" required /></label>
+                    <label>EMAIL YOKI TELEFON<input name="email" type="text" placeholder="example@mail.uz" required /></label>
+                  </div>
+                  <label>MAVZU<select name="subject"><option>Buyurtma holati</option><option>Mahsulot haqida</option><option>Yetkazib berish</option><option>Boshqa savol</option></select></label>
+                  <label>XABARINGIZ<textarea name="message" placeholder="Qanday yordam bera olamiz?" required></textarea></label>
+                  <label class="fc-check"><input type="checkbox" required /> Men maxfiylik siyosati shartlariga roziman.</label>
+                  <button type="submit" class="fc-submit">YUBORISH</button>
+                  <p id="kdContactStatus" class="kd-contact-status" aria-live="polite"></p>
+                </form>
+              </div>
             </div>
-        </div>
-      </section>
+          </div>
+        </section>
+
+        <section class="fc-stores">
+          <div class="fc-wrap" data-aos="fade-up">
+            <h2 class="fc-section-title">DO'KONLARIMIZ</h2>
+            <div class="fc-stores-grid">
+              <article class="fc-store">
+                <img class="fc-store-img" src="../images/aloqa-map-tashkent.jpg" alt="Toshkent City do'koni" />
+                <div class="fc-store-body">
+                  <span class="fc-store-tag">FLAGSHIP</span>
+                  <h3>TOSHKENT CITY CENTER</h3>
+                  <p>Amir Temur ko'chasi, Toshkent City markazi, 15-uy.</p>
+                  <div class="fc-store-meta">◷ 10:00 — 20:00</div>
+                  <a class="fc-route" href="https://maps.google.com/?q=Tashkent+City" target="_blank" rel="noopener">MARSHRUTNI KO'RISH</a>
+                </div>
+              </article>
+              <article class="fc-store">
+                <img class="fc-store-img" src="../images/aloqa-map-chilonzor.jpg" alt="Chilonzor do'koni" />
+                <div class="fc-store-body">
+                  <span class="fc-store-tag">URBAN POINT</span>
+                  <h3>CHILONZOR</h3>
+                  <p>Chilonzor 6-kvartal, Bunyodkor ko'chasi, 4A. Atlas savdo markazi.</p>
+                  <div class="fc-store-meta">◷ 10:00 — 22:00</div>
+                  <a class="fc-route" href="https://maps.google.com/?q=Tashkent+Chilonzor" target="_blank" rel="noopener">MARSHRUTNI KO'RISH</a>
+                </div>
+              </article>
+              <article class="fc-store">
+                <img class="fc-store-img" src="../images/aloqa-map-yunusobod.jpg" alt="Yunusobod Mega Outlet" />
+                <div class="fc-store-body">
+                  <span class="fc-store-tag">MEGA OUTLET</span>
+                  <h3>YUNUSOBOD FILIAL</h3>
+                  <p>Yunusobod 19-kvartal, Ahmad Donish ko'chasi. Mega Planet SM.</p>
+                  <div class="fc-store-meta">◷ 10:00 — 22:00</div>
+                  <a class="fc-route" href="https://maps.google.com/?q=Tashkent+Yunusobod" target="_blank" rel="noopener">MARSHRUTNI KO'RISH</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="fc-faq">
+          <div class="fc-wrap" data-aos="fade-up">
+            <p class="fc-eyebrow">YORDAM MARKAZI</p>
+            <h2 class="fc-section-title">KO'P SO'RALADIGAN SAVOLLAR</h2>
+            <div class="fc-faq-grid">
+              <details open><summary>Yetkazib berish qancha vaqt oladi?</summary><div class="fc-answer">Toshkent shahri bo'ylab yetkazib berish 24 soat ichida, viloyatlar bo'ylab esa 2–3 ish kuni davomida amalga oshiriladi.</div></details>
+              <details><summary>O'lchamni qanday tanlayman?</summary><div class="fc-answer">Mahsulot sahifasidagi o'lcham jadvalidan foydalaning yoki bizga yozing.</div></details>
+              <details><summary>To'lov usullari qanday?</summary><div class="fc-answer">Naqd, karta va onlayn to'lov usullari mavjud.</div></details>
+              <details><summary>Buyurtma holatini qanday bilaman?</summary><div class="fc-answer">Buyurtma raqamingiz orqali operatorimizdan ma'lumot olishingiz mumkin.</div></details>
+              <details><summary>Mahsulotni qaytarish mumkinmi?</summary><div class="fc-answer">Mahsulot qaytarish shartlariga mos bo'lsa, belgilangan muddatda qaytarish mumkin.</div></details>
+              <details><summary>Chegirmalar qachon bo'ladi?</summary><div class="fc-answer">Yangi aksiyalar haqida Telegram va ijtimoiy tarmoqlarimizda e'lon qilamiz.</div></details>
+              <details><summary>Original ekanligiga kafolat bormi?</summary><div class="fc-answer">Ha. Mahsulotlarimizning original ekanligi bo'yicha kafolat beramiz.</div></details>
+              <details><summary>Do'konda bor mahsulotni saytdan olsa bo'ladimi?</summary><div class="fc-answer">Ha, mavjud mahsulotni saytdan buyurtma qilib, do'kondan olib ketishingiz mumkin.</div></details>
+            </div>
+            <div class="fc-help">
+              <div><h3>Javob topolmadingizmi?</h3><p>Bizga Telegram orqali yozing, operatorimiz tezda yordam beradi.</p></div>
+              <a href="#">▷ TELEGRAM'DA YOZING</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="fc-near">
+          <div class="fc-wrap" data-aos="fade-up">
+            <div class="fc-near-inner">
+              <span class="fc-dot d1"></span><span class="fc-dot d2"></span><span class="fc-dot d3"></span>
+              <h2>BIZ SIZGA YAQINMIZ</h2>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="bg-[#0C0C0E] border-t border-[#1E1E1E] pt-[80px] max-[600px]:!pt-[48px]">
+      <div class="max-w-[1285px] mx-auto px-5">
+        <div
+          class="grid grid-cols-4 gap-[40px] pb-[64px] max-[900px]:!grid-cols-2 max-[500px]:!grid-cols-1 max-[900px]:!gap-[32px]"
+        >
+          <div>
+            <h3 class="text-white text-[16px] font-semibold uppercase tracking-[1px]">
+              Do'kon
+            </h3>
+            <ul class="mt-[20px] flex flex-col gap-[12px]">
+              <li><a href="../index.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Bosh sahifa</a></li>
+              <li><a href="./dokon.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Barcha krossovkalar</a></li>
+              <li><a href="./mahsulot.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Yangi kelganlar</a></li>
+              <li><a href="./dokon.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Chegirmalar</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-[16px] font-semibold uppercase tracking-[1px]">
+              Kompaniya
+            </h3>
+            <ul class="mt-[20px] flex flex-col gap-[12px]">
+              <li><a href="./bizhaqimizda.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Biz haqimizda</a></li>
+              <li><a href="./aloqa.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Do'konlarimiz</a></li>
+              <li><a href="#" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Karyera</a></li>
+              <li><a href="#" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Hamkorlar</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-[16px] font-semibold uppercase tracking-[1px]">
+              Yordam
+            </h3>
+            <ul class="mt-[20px] flex flex-col gap-[12px]">
+              <li><a href="./aloqa.html" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Aloqa</a></li>
+              <li><a href="#" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Yetkazib berish</a></li>
+              <li><a href="#" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Qaytarish shartlari</a></li>
+              <li><a href="#" class="text-[#8A8A85] text-[14px] hover:text-[#CAF231] duration-300">Tez-tez so'raladigan savollar</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-[16px] font-semibold uppercase tracking-[1px]">
+              Yangiliklar
+            </h3>
+            <p class="mt-[20px] text-[#8A8A85] text-[14px] leading-[1.6]">
+              Eksklyuziv chegirmalar va yangi dropla haqida birinchi bo'lib
+              xabar toping.
+            </p>
+            <form class="mt-[16px] flex gap-[8px]" id="footerNewsletterForm">
+              <input
+                type="email"
+                required
+                placeholder="Email manzilingiz"
+                class="w-full bg-[#131411] border border-[#26262A] rounded-[9999px] px-[16px] py-[10px] text-white text-[13px] outline-none focus:border-[#CAF231] duration-300"
+              />
+              <button
+                type="submit"
+                class="shrink-0 bg-[#CAF231] text-[#171E00] text-[13px] font-semibold rounded-[9999px] px-[20px] hover:bg-transparent hover:text-[#CAF231] border-2 border-[#CAF231] duration-300"
+              >
+                OK
+              </button>
+            </form>
+            <div class="flex gap-[16px] mt-[24px]">
+              <a href="#" class="text-[#8A8A85] text-[13px] hover:text-[#CAF231] duration-300">Instagram</a>
+              <a href="#" class="text-[#8A8A85] text-[13px] hover:text-[#CAF231] duration-300">Telegram</a>
+              <a href="#" class="text-[#8A8A85] text-[13px] hover:text-[#CAF231] duration-300">TikTok</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-[#1E1E1E] py-[24px] flex items-center justify-between gap-[16px] max-[600px]:!flex-col max-[600px]:!text-center"
+        >
+          <p class="text-[#5F5F63] text-[13px]">
+            © 2026 KROSSDROP. Barcha huquqlar himoyalangan.
+          </p>
+          <p class="text-[#5F5F63] text-[13px]">
+            Toshkent, O'zbekiston
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- ====== / FOOTER ====== -->
+
 
     <!-- ====== KROSSDROP RO'YXATDAN O'TISH MODALI (bitta nusxa) ====== -->
     <div class="kd-backdrop" id="kdBackdrop">
@@ -278,7 +605,7 @@
         <li
           class="inline-block group relative hover:text-[#CAF231] duration-[0.5s]"
         >
-          <a href="">Yangi kelganlar</a>
+          <a href="./mahsulot.html">Yangi kelganlar</a>
           <span
             class="bg-[#CAF231] inline-block absolute left-1 top-6 h-1 duration-[0.5s] w-0 group group-hover:w-28"
           ></span>
@@ -302,8 +629,24 @@
       </ul>
       <br />
       <br />
-      <button class="open-btn !w-full" id="kdOpenModalBtnMobile">Kirish</button>
+      <button class="open-btn !py-3 !w-full" id="kdOpenModalBtnMobile">Kirish</button>
     </div>
+
+    <script>
+      document.getElementById("kdContactForm")?.addEventListener("submit", function(e){
+        e.preventDefault();
+        const status=document.getElementById("kdContactStatus");
+        const button=this.querySelector("button[type=submit]");
+        button.disabled=true;
+        button.textContent="YUBORILMOQDA...";
+        setTimeout(()=>{
+          status.textContent="Xabaringiz qabul qilindi. Tez orada siz bilan bog'lanamiz.";
+          this.reset();
+          button.disabled=false;
+          button.innerHTML='XABAR YUBORISH <span>↗</span>';
+        },500);
+      });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
 
@@ -449,5 +792,35 @@
       })();
     </script>
     <!-- ====== / MODAL SCRIPT ====== -->
+  
+    <!-- ====== FOOTER NEWSLETTER SCRIPT ====== -->
+    <script>
+      (function () {
+        const form = document.getElementById("footerNewsletterForm");
+        if (!form) return;
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const btn = form.querySelector("button");
+          const original = btn.textContent;
+          btn.textContent = "✓";
+          form.reset();
+          setTimeout(() => (btn.textContent = original), 2000);
+        });
+      })();
+    </script>
+    <!-- ====== / FOOTER NEWSLETTER SCRIPT ====== -->
+
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+          duration: 800,
+          easing: "ease-out-cubic",
+          once: true,
+          offset: 80,
+        });
+      });
+    </script>
   </body>
 </html>
