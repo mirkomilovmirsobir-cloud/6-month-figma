@@ -1358,7 +1358,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: off 7s forwards;
+  animation: off 5s forwards linear;
 }
 
 @keyframes off {
@@ -1373,6 +1373,6 @@ textarea {
   }
   100% {
     opacity: 0;
-    z-index: -1;
+    z-index: -5;
   }
 }
